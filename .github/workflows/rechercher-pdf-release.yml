@@ -1,0 +1,167 @@
+name: Rechercher — PDF Release Publisher
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'artifacts/rechercher/multilingual-pdf-acquisition/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rechercher-pdf-release-main
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Checkout repository with LFS
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          lfs: true
+          persist-credentials: false
+
+      - name: Prepare public PDF release bundles
+        id: prepare
+        shell: bash
+        run: |
+          set -euo pipefail
+          root='artifacts/rechercher/multilingual-pdf-acquisition'
+          release_dir="$RUNNER_TEMP/rechercher-release"
+          rm -rf "$release_dir"
+          mkdir -p "$release_dir/bundles"
+
+          manifest="$root/manifest.json"
+          test -s "$manifest"
+
+          python3 - <<'PY'
+          import json, os
+          m=json.load(open("artifacts/rechercher/multilingual-pdf-acquisition/manifest.json", encoding="utf-8"))
+          root=os.path.abspath("artifacts/rechercher/multilingual-pdf-acquisition")
+          out=os.path.abspath(os.environ["RUNNER_TEMP"]+"/rechercher-release/public-files.txt")
+          with open(out,"w",encoding="utf-8") as fp:
+              for entry in m.get("languages", {}).values():
+                  if entry.get("acquisition") != "public":
+                      continue
+                  for item in entry.get("files", []):
+                      p=item.get("path")
+                      if not p or not p.endswith(".pdf") or item.get("research_only"):
+                          continue
+                      full=os.path.abspath(p)
+                      if not full.startswith(root + os.sep):
+                          raise SystemExit(f"unsafe manifest path: {p}")
+                      if not os.path.isfile(full):
+                          raise SystemExit(f"manifest PDF missing: {p}")
+                      fp.write(full+"\\n")
+          PY
+
+          public_count="$(wc -l < "$release_dir/public-files.txt" | tr -d ' ')"
+          if [ "$public_count" -eq 0 ]; then
+            echo "No public redistributable PDFs to publish."
+            echo "has_public=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          python3 - "$release_dir" <<'PY'
+          import os, sys, tarfile, hashlib
+          out=sys.argv[1]
+          files=[x.strip() for x in open(os.path.join(out,"public-files.txt"),encoding="utf-8") if x.strip()]
+          limit=1800*1024*1024
+          max_assets=900
+          batches=[]
+          cur=[]
+          cur_bytes=0
+          for f in files:
+              size=os.path.getsize(f)
+              if size >= 2*1024*1024*1024:
+                  raise SystemExit(f"release asset source exceeds GitHub's per-asset limit: {f}")
+              if cur and (cur_bytes + size > limit or len(cur) >= max_assets):
+                  batches.append(cur)
+                  cur=[]
+                  cur_bytes=0
+              cur.append(f)
+              cur_bytes += size
+          if cur:
+              batches.append(cur)
+
+          checks=[]
+          for i,batch in enumerate(batches,1):
+              bundle=os.path.join(out,"bundles",f"dinullah-public-pdfs-part-{i:03d}.tar")
+              with tarfile.open(bundle,"w") as tf:
+                  for f in batch:
+                      rel=os.path.relpath(f,"artifacts/rechercher/multilingual-pdf-acquisition")
+                      tf.add(f,arcname=rel,recursive=False)
+              h=hashlib.sha256()
+              with open(bundle,"rb") as fp:
+                  for chunk in iter(lambda: fp.read(1024*1024),b""):
+                      h.update(chunk)
+              checks.append(f"{h.hexdigest()}  {os.path.basename(bundle)}")
+          import shutil
+          shutil.copy2("artifacts/rechercher/multilingual-pdf-acquisition/manifest.json",os.path.join(out,"manifest.json"))
+          with open(os.path.join(out,"SHA256SUMS.txt"),"w",encoding="utf-8") as fp:
+              fp.write("\\n".join(checks)+"\\n")
+          print(f"RELEASE_PREPARED batches={len(batches)} pdfs={len(files)} bytes={sum(os.path.getsize(f) for f in files)}")
+          PY
+
+          echo "has_public=true" >> "$GITHUB_OUTPUT"
+
+      - name: Create draft release and upload assets
+        if: steps.prepare.outputs.has_public == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="rechercher-pdfs-$(date -u +%Y%m%d-%H%M%S)-${{ github.run_id }}"
+          notes="$RUNNER_TEMP/release-notes.md"
+          {
+            echo "# Rechercher public PDF corpus"
+            echo
+            echo "Generated from commit ${{ github.sha }}."
+            echo "Only entries classified as \`public\` by the acquisition manifest are included."
+            echo "Research-only and rights-blocked material is excluded."
+            echo
+            echo "Each release asset is kept below 2 GiB; SHA-256 checksums are provided in SHA256SUMS.txt."
+          } > "$notes"
+
+          gh release create "$tag" "$RUNNER_TEMP/rechercher-release/bundles/"*.tar "$RUNNER_TEMP/rechercher-release/manifest.json" "$RUNNER_TEMP/rechercher-release/SHA256SUMS.txt" \
+            --repo "${{ github.repository }}" \
+            --title "Rechercher public PDFs — $tag" \
+            --notes-file "$notes" \
+            --draft \
+            --latest=false
+
+          gh release edit "$tag" --repo "${{ github.repository }}" --draft=false --latest=false
+          gh release view "$tag" --repo "${{ github.repository }}" --json tagName,isDraft,isLatest,assets,url
+
+      - name: Verify release asset sizes and digests
+        if: steps.prepare.outputs.has_public == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          latest="$(gh release view --repo "${{ github.repository }}" --json tagName --jq '.tagName')"
+          python3 - "$latest" <<'PY'
+          import json, subprocess, sys, os
+          tag=sys.argv[1]
+          raw=subprocess.check_output(
+              ["gh","release","view",tag,"--repo",os.environ["GITHUB_REPOSITORY"],"--json","assets"],
+              text=True
+          )
+          assets=json.loads(raw)["assets"]
+          assert assets, "release has no assets"
+          for a in assets:
+              size=int(a["size"])
+              if size >= 2*1024*1024*1024:
+                  raise SystemExit(f"release asset exceeds 2 GiB: {a['name']} ({size})")
+              if not a.get("digest","").startswith("sha256:"):
+                  raise SystemExit(f"release asset has no SHA-256 digest: {a['name']}")
+          print(f"RELEASE_VERIFIED assets={len(assets)}")
+          PY
