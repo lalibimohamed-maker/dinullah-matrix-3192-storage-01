@@ -13,6 +13,10 @@ This storage has two logical access routes:
 
 The two routes are **access states, not two copies of the same artifact**.
 
+## Repository-owned Releases
+
+This storage repository retains its own GitHub Releases. Releases are independent of Releases in the PDF storage family and are not removed when other storage shards gain their own Release workflows. The storage-release-publisher.yml workflow publishes verified matrix artifacts as assets belonging to this repository.
+
 ## One-copy rule
 
 - A canonical artifact is stored once, identified by SHA-256.
