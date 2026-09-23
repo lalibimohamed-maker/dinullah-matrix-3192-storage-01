@@ -1,4 +1,3 @@
-# One-time guarded cleanup; keeps the oldest byte-identical SHA-256 copy.
 name: Cleanup duplicate PDF Release Assets
 
 on:
@@ -25,59 +24,67 @@ jobs:
           echo "Repository: $REPO"
           echo "Collecting all Release Assets..."
 
-          rm -f /tmp/releases.jsonl /tmp/assets.jsonl /tmp/delete.jsonl
+          rm -f /tmp/releases.json /tmp/assets.json /tmp/delete.json
 
-          gh api --paginate "/repos/$REPO/releases?per_page=100"             --jq '.[] | {id,created_at,tag_name}' > /tmp/releases.jsonl
+          gh api --paginate "/repos/$REPO/releases?per_page=100" > /tmp/releases-pages.json
+          jq -s 'add' /tmp/releases-pages.json > /tmp/releases.json
 
-          release_count=$(wc -l < /tmp/releases.jsonl | tr -d ' ')
+          release_count=$(jq 'length' /tmp/releases.json)
           echo "Releases discovered: $release_count"
 
-          while IFS= read -r release; do
-            release_id=$(jq -r '.id' <<<"$release")
-            created_at=$(jq -r '.created_at' <<<"$release")
-            tag_name=$(jq -r '.tag_name' <<<"$release")
+          : > /tmp/assets.json
+          for release_id in $(jq -r '.[].id' /tmp/releases.json); do
+            gh api --paginate "/repos/$REPO/releases/$release_id/assets?per_page=100" > "/tmp/assets-$release_id-pages.json"
+            jq -s --argjson rid "$release_id" '
+              add
+              | map(. + {release_id: $rid})
+            ' "/tmp/assets-$release_id-pages.json" > "/tmp/assets-$release_id.json"
 
-            gh api --paginate "/repos/$REPO/releases/$release_id/assets?per_page=100"               --jq '.[] | {id,name,digest,size,release_id:'"$release_id"',release_created_at:'"$(printf '%s' "$created_at" | jq -Rs .)"',tag_name:'"$(printf '%s' "$tag_name" | jq -Rs .)"}'               >> /tmp/assets.jsonl
-          done < /tmp/releases.jsonl
+            if [ ! -s /tmp/assets.json ]; then
+              cp "/tmp/assets-$release_id.json" /tmp/assets.json
+            else
+              jq -s 'add' /tmp/assets.json "/tmp/assets-$release_id.json" > /tmp/assets-merged.json
+              mv /tmp/assets-merged.json /tmp/assets.json
+            fi
+          done
 
-          total=$(wc -l < /tmp/assets.jsonl | tr -d ' ')
-          unique=$(jq -s 'map(.digest) | unique | length' /tmp/assets.jsonl)
+          total=$(jq 'length' /tmp/assets.json)
+          unique=$(jq 'map(.digest) | unique | length' /tmp/assets.json)
           duplicate_occurrences=$((total-unique))
 
           echo "TOTAL_ASSETS=$total"
           echo "UNIQUE_SHA256=$unique"
           echo "DUPLICATE_OCCURRENCES=$duplicate_occurrences"
 
-          # Hard safety gate: this cleanup is authorized for the audited snapshot only.
-          # Expected snapshot: 6 Releases × 44 assets = 264 assets, 44 unique SHA-256,
-          # every SHA-256 appearing exactly 6 times, therefore 220 duplicate occurrences.
+          # Hard safety gate for the audited snapshot:
+          # 6 Releases × 44 assets = 264 assets, 44 unique SHA-256,
+          # every SHA-256 occurs exactly 6 times.
           test "$total" -eq 264
           test "$unique" -eq 44
           test "$duplicate_occurrences" -eq 220
 
-          bad_counts=$(jq -s '
+          bad_counts=$(jq '
             group_by(.digest)
             | map({digest: .[0].digest, count: length})
             | map(select(.count != 6))
             | length
-          ' /tmp/assets.jsonl)
+          ' /tmp/assets.json)
 
           test "$bad_counts" -eq 0
+          echo "Safety gate passed."
 
-          echo "Safety gate passed: exactly 264 assets, 44 unique SHA-256 values, each repeated 6 times."
-
-          # Keep exactly one copy of each SHA-256: the asset in the oldest Release.
+          # Keep exactly one copy of each digest: the oldest Release.
           # Releases themselves are NOT deleted.
-          jq -s '
+          jq '
             group_by(.digest)
             | .[]
-            | sort_by(.release_created_at, .release_id, .id)
+            | sort_by(.release_created_at // "", .release_id, .id)
             | .[1:]
             | .[]
             | {id, name, digest, release_id, tag_name}
-          ' /tmp/assets.jsonl > /tmp/delete.jsonl
+          ' /tmp/assets.json > /tmp/delete.json
 
-          delete_count=$(wc -l < /tmp/delete.jsonl | tr -d ' ')
+          delete_count=$(jq 'length' /tmp/delete.json)
           echo "Assets scheduled for deletion: $delete_count"
           test "$delete_count" -eq 220
 
@@ -90,21 +97,30 @@ jobs:
             echo "Deleting asset_id=$asset_id name=$asset_name digest=$digest"
             gh api --method DELETE "/repos/$REPO/releases/assets/$asset_id" >/dev/null
             deleted=$((deleted+1))
-          done < /tmp/delete.jsonl
+          done < <(jq -c '.[]' /tmp/delete.json)
 
           echo "Deleted assets: $deleted"
           test "$deleted" -eq 220
 
           echo "Re-verifying Release Assets after deletion..."
 
-          rm -f /tmp/assets_after.jsonl
-          while IFS= read -r release; do
-            release_id=$(jq -r '.id' <<<"$release")
-            gh api --paginate "/repos/$REPO/releases/$release_id/assets?per_page=100"               --jq '.[] | {id,name,digest,release_id:'"$release_id"'}'               >> /tmp/assets_after.jsonl
-          done < /tmp/releases.jsonl
+          rm -f /tmp/assets-after.json
+          : > /tmp/assets-after.json
 
-          total_after=$(wc -l < /tmp/assets_after.jsonl | tr -d ' ')
-          unique_after=$(jq -s 'map(.digest) | unique | length' /tmp/assets_after.jsonl)
+          for release_id in $(jq -r '.[].id' /tmp/releases.json); do
+            gh api --paginate "/repos/$REPO/releases/$release_id/assets?per_page=100" > "/tmp/assets-after-$release_id-pages.json"
+            jq -s 'add' "/tmp/assets-after-$release_id-pages.json" > "/tmp/assets-after-$release_id.json"
+
+            if [ ! -s /tmp/assets-after.json ]; then
+              cp "/tmp/assets-after-$release_id.json" /tmp/assets-after.json
+            else
+              jq -s 'add' /tmp/assets-after.json "/tmp/assets-after-$release_id.json" > /tmp/assets-after-merged.json
+              mv /tmp/assets-after-merged.json /tmp/assets-after.json
+            fi
+          done
+
+          total_after=$(jq 'length' /tmp/assets-after.json)
+          unique_after=$(jq 'map(.digest) | unique | length' /tmp/assets-after.json)
           duplicate_after=$((total_after-unique_after))
 
           echo "AFTER_TOTAL_ASSETS=$total_after"
