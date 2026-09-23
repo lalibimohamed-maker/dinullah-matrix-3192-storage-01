@@ -56,9 +56,6 @@ jobs:
           echo "UNIQUE_SHA256=$unique"
           echo "DUPLICATE_OCCURRENCES=$duplicate_occurrences"
 
-          # Hard safety gate for the audited snapshot:
-          # 6 Releases × 44 assets = 264 assets, 44 unique SHA-256,
-          # every SHA-256 occurs exactly 6 times.
           test "$total" -eq 264
           test "$unique" -eq 44
           test "$duplicate_occurrences" -eq 220
@@ -74,14 +71,15 @@ jobs:
           echo "Safety gate passed."
 
           # Keep exactly one copy of each digest: the oldest Release.
+          # The Release ID is used as the deterministic age/order key.
           # Releases themselves are NOT deleted.
           jq '
             group_by(.digest)
-            | .[]
-            | sort_by(.release_created_at // "", .release_id, .id)
-            | .[1:]
-            | .[]
-            | {id, name, digest, release_id, tag_name}
+            | map(
+                sort_by(.release_id, .id)
+                | .[1:]
+              )
+            | add
           ' /tmp/assets.json > /tmp/delete.json
 
           delete_count=$(jq 'length' /tmp/delete.json)
