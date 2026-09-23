@@ -1,3 +1,4 @@
+# One-time guarded cleanup; keeps the oldest byte-identical SHA-256 copy.
 name: Cleanup duplicate PDF Release Assets
 
 on:
