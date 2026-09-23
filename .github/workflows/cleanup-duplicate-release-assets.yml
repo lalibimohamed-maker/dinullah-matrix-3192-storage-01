@@ -2,6 +2,9 @@ name: Cleanup duplicate PDF Release Assets
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/cleanup-duplicate-release-assets.yml"
 
 permissions:
   contents: read
