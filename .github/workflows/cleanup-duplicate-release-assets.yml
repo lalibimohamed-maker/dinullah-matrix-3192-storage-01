@@ -1,0 +1,114 @@
+name: Cleanup duplicate PDF Release Assets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify and delete duplicate Release Assets
+        env:
+          GH_TOKEN: ${{ secrets.MATRIX_CLEANUP_TOKEN }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Repository: $REPO"
+          echo "Collecting all Release Assets..."
+
+          rm -f /tmp/releases.jsonl /tmp/assets.jsonl /tmp/delete.jsonl
+
+          gh api --paginate "/repos/$REPO/releases?per_page=100"             --jq '.[] | {id,created_at,tag_name}' > /tmp/releases.jsonl
+
+          release_count=$(wc -l < /tmp/releases.jsonl | tr -d ' ')
+          echo "Releases discovered: $release_count"
+
+          while IFS= read -r release; do
+            release_id=$(jq -r '.id' <<<"$release")
+            created_at=$(jq -r '.created_at' <<<"$release")
+            tag_name=$(jq -r '.tag_name' <<<"$release")
+
+            gh api --paginate "/repos/$REPO/releases/$release_id/assets?per_page=100"               --jq '.[] | {id,name,digest,size,release_id:'"$release_id"',release_created_at:'"$(printf '%s' "$created_at" | jq -Rs .)"',tag_name:'"$(printf '%s' "$tag_name" | jq -Rs .)"}'               >> /tmp/assets.jsonl
+          done < /tmp/releases.jsonl
+
+          total=$(wc -l < /tmp/assets.jsonl | tr -d ' ')
+          unique=$(jq -s 'map(.digest) | unique | length' /tmp/assets.jsonl)
+          duplicate_occurrences=$((total-unique))
+
+          echo "TOTAL_ASSETS=$total"
+          echo "UNIQUE_SHA256=$unique"
+          echo "DUPLICATE_OCCURRENCES=$duplicate_occurrences"
+
+          # Hard safety gate: this cleanup is authorized for the audited snapshot only.
+          # Expected snapshot: 6 Releases × 44 assets = 264 assets, 44 unique SHA-256,
+          # every SHA-256 appearing exactly 6 times, therefore 220 duplicate occurrences.
+          test "$total" -eq 264
+          test "$unique" -eq 44
+          test "$duplicate_occurrences" -eq 220
+
+          bad_counts=$(jq -s '
+            group_by(.digest)
+            | map({digest: .[0].digest, count: length})
+            | map(select(.count != 6))
+            | length
+          ' /tmp/assets.jsonl)
+
+          test "$bad_counts" -eq 0
+
+          echo "Safety gate passed: exactly 264 assets, 44 unique SHA-256 values, each repeated 6 times."
+
+          # Keep exactly one copy of each SHA-256: the asset in the oldest Release.
+          # Releases themselves are NOT deleted.
+          jq -s '
+            group_by(.digest)
+            | .[]
+            | sort_by(.release_created_at, .release_id, .id)
+            | .[1:]
+            | .[]
+            | {id, name, digest, release_id, tag_name}
+          ' /tmp/assets.jsonl > /tmp/delete.jsonl
+
+          delete_count=$(wc -l < /tmp/delete.jsonl | tr -d ' ')
+          echo "Assets scheduled for deletion: $delete_count"
+          test "$delete_count" -eq 220
+
+          deleted=0
+          while IFS= read -r asset; do
+            asset_id=$(jq -r '.id' <<<"$asset")
+            asset_name=$(jq -r '.name' <<<"$asset")
+            digest=$(jq -r '.digest' <<<"$asset")
+
+            echo "Deleting asset_id=$asset_id name=$asset_name digest=$digest"
+            gh api --method DELETE "/repos/$REPO/releases/assets/$asset_id" >/dev/null
+            deleted=$((deleted+1))
+          done < /tmp/delete.jsonl
+
+          echo "Deleted assets: $deleted"
+          test "$deleted" -eq 220
+
+          echo "Re-verifying Release Assets after deletion..."
+
+          rm -f /tmp/assets_after.jsonl
+          while IFS= read -r release; do
+            release_id=$(jq -r '.id' <<<"$release")
+            gh api --paginate "/repos/$REPO/releases/$release_id/assets?per_page=100"               --jq '.[] | {id,name,digest,release_id:'"$release_id"'}'               >> /tmp/assets_after.jsonl
+          done < /tmp/releases.jsonl
+
+          total_after=$(wc -l < /tmp/assets_after.jsonl | tr -d ' ')
+          unique_after=$(jq -s 'map(.digest) | unique | length' /tmp/assets_after.jsonl)
+          duplicate_after=$((total_after-unique_after))
+
+          echo "AFTER_TOTAL_ASSETS=$total_after"
+          echo "AFTER_UNIQUE_SHA256=$unique_after"
+          echo "AFTER_DUPLICATE_OCCURRENCES=$duplicate_after"
+
+          test "$total_after" -eq 44
+          test "$unique_after" -eq 44
+          test "$duplicate_after" -eq 0
+
+          echo "SUCCESS: 44 unique PDF Release Assets remain; no duplicate SHA-256 remains."
