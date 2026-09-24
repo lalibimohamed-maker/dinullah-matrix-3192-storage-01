@@ -5,9 +5,9 @@
   "matrix_owner": "PR #541",
   "quran_layer": "PR #558",
   "counts": {
-    "links": 159,
-    "rights_review_required": 159,
-    "new_global_links_added_2026_09_24": 32,
+    "links": 171,
+    "rights_review_required": 171,
+    "new_global_links_added_2026_09_24": 44,
     "previous_snapshot_links": 127
   },
   "rules": [
@@ -1977,6 +1977,352 @@
         "Urdu"
       ],
       "notes": "Current hadith pages expose Sahih al-Bukhari in 10 languages. Use as a discovery/reference lane; verify translation provenance and redistribution rights before downloading into public storage."
+    },
+    {
+      "id": "world-164",
+      "category": "Multilingual Quran API and downloadable data",
+      "name": "GlobalQuran.com",
+      "url": "https://globalquran.com/",
+      "scope": "api-and-dataset-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://docs.globalquran.com/",
+      "capabilities": [
+        "quran",
+        "translations",
+        "100_plus_languages",
+        "api",
+        "bulk_download",
+        "json",
+        "xml",
+        "txt",
+        "audio",
+        "images"
+      ],
+      "languages": [
+        "100+ languages"
+      ],
+      "notes": "Official documentation describes REST APIs and downloadable Quran resources; the project documentation also describes 100+ language translations and bulk downloads. Verify each translation's upstream license before redistribution."
+    },
+    {
+      "id": "world-165",
+      "category": "Multilingual Islamic publications",
+      "name": "Wathakker",
+      "url": "https://wathakker.net/",
+      "scope": "book-publication-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified-via-publisher-references",
+      "verification_url": "https://www.islamland.com/eng/books/al-kalim-at-tayyib-the-goodly-words-1432798899",
+      "capabilities": [
+        "books",
+        "pdf",
+        "word",
+        "dawah",
+        "aqeedah",
+        "dhikr",
+        "multilingual"
+      ],
+      "languages": [
+        "English",
+        "Arabic",
+        "French",
+        "Portuguese",
+        "Malay",
+        "Hausa",
+        "and additional language editions"
+      ],
+      "notes": "Current indexed editions identify Wathakker as publisher and expose PDF/Word downloads on multilingual IslamLand mirrors. Treat the Wathakker imprint and each edition's rights separately; do not infer blanket redistribution permission."
+    },
+    {
+      "id": "world-166",
+      "category": "Multilingual Quran downloads",
+      "name": "AlQuranTranslation.com",
+      "url": "https://www.alqurantranslation.com/",
+      "scope": "quran-translation-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.alqurantranslation.com/download-quran-translations/",
+      "capabilities": [
+        "quran",
+        "translations",
+        "120_plus_languages",
+        "pdf",
+        "txt",
+        "mp3",
+        "rar"
+      ],
+      "languages": [
+        "120+ languages"
+      ],
+      "notes": "Current site provides Quran translations and downloadable PDF/text/MP3/RAR packages in 120+ languages. Treat it as an acquisition/discovery source until translator/publisher rights are verified per edition."
+    },
+    {
+      "id": "world-167",
+      "category": "Multilingual Quran downloads",
+      "name": "Quran Mercy",
+      "url": "https://quranmercy.com/",
+      "scope": "quran-translation-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://quranmercy.com/download-quran-translation-rar/",
+      "capabilities": [
+        "quran",
+        "translations",
+        "120_languages",
+        "pdf",
+        "mp3",
+        "rar",
+        "multilingual_pamphlets"
+      ],
+      "languages": [
+        "120+ languages"
+      ],
+      "notes": "Current site exposes Quran translation downloads in 120+ languages and multilingual Islamic pamphlets. It may overlap materially with other multilingual translation mirrors; SHA-256 deduplication must prevent duplicate acquisition."
+    },
+    {
+      "id": "world-168",
+      "category": "Multilingual Islamic books and hadith",
+      "name": "UrduPoint Islamic Books",
+      "url": "https://www.urdupoint.com/islam/islamic-books-pdf.html",
+      "scope": "book-publication-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.urdupoint.com/islam/islamic-books-pdf.html",
+      "capabilities": [
+        "books",
+        "hadith",
+        "sunnah",
+        "quran",
+        "fiqh",
+        "multilingual",
+        "pdf"
+      ],
+      "languages": [
+        "Urdu",
+        "Arabic",
+        "English",
+        "Sindhi",
+        "Hindi",
+        "Bangla",
+        "Tamil",
+        "Pashto",
+        "Malayalam"
+      ],
+      "notes": "Current Islamic-book index lists major hadith works and Islamic books in multiple South Asian languages. Rights and edition provenance must be verified per downloadable item."
+    },
+    {
+      "id": "world-169",
+      "category": "Multilingual Islamic PDF library",
+      "name": "HolyBooks.in",
+      "url": "https://www.holybooks.in/p/islamic-books-pdf-download.html",
+      "scope": "discovery-and-book-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.holybooks.in/p/islamic-books-pdf-download.html",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "tafsir",
+        "seerah",
+        "fiqh",
+        "multilingual",
+        "pdf"
+      ],
+      "languages": [
+        "English",
+        "Urdu",
+        "Arabic",
+        "Hindi",
+        "Bengali",
+        "Tamil",
+        "Telugu",
+        "Odia",
+        "and additional languages"
+      ],
+      "notes": "Current site advertises Islamic PDFs across multiple languages and categories. It is an aggregator rather than a blanket rights authority; source/publisher/license must be captured for every acquired item."
+    },
+    {
+      "id": "world-170",
+      "category": "Islamic source discovery and scholarly indexing",
+      "name": "Nuria",
+      "url": "https://nuria.one/",
+      "scope": "research-indexing-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://nuria.one/about/",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "dhikr",
+        "dua",
+        "source_citation",
+        "open_interfaces",
+        "100_plus_languages",
+        "research_indexing"
+      ],
+      "languages": [
+        "100+ languages"
+      ],
+      "notes": "Current site describes Quran, hadith and source-citing Islamic knowledge interfaces. AI responses must remain indexing/retrieval assistance only; underlying cited sources require independent verification before entering the scholarly corpus or download workflow."
+    },
+    {
+      "id": "world-171",
+      "category": "Multilingual Islamic PDF library",
+      "name": "Download Islamic Religion PDF Ebooks",
+      "url": "https://www.download-islamic-religion-pdf-ebooks.com/",
+      "scope": "book-discovery-and-download-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://download-islamic-religion-pdf-ebooks.com/sitemap",
+      "capabilities": [
+        "books",
+        "quran",
+        "sunnah",
+        "hadith",
+        "tafsir",
+        "fiqh",
+        "seerah",
+        "multilingual",
+        "pdf",
+        "direct_links"
+      ],
+      "languages": [
+        "English",
+        "French",
+        "Spanish",
+        "Indonesian",
+        "Turkish",
+        "Persian",
+        "Urdu",
+        "German",
+        "Italian",
+        "Bengali",
+        "Russian",
+        "Hindi",
+        "Malayalam",
+        "Thai",
+        "Filipino",
+        "Albanian",
+        "Amharic",
+        "Bosnian",
+        "Polish",
+        "Chinese",
+        "Portuguese",
+        "Korean",
+        "Japanese",
+        "and other languages"
+      ],
+      "notes": "Current sitemap explicitly lists an Islamic-books section with PDF downloads and a separate 'Islamic Books in Other Languages' section with 23 language categories. The catalog contains mixed material, so Sunni/madhhab and edition provenance filtering plus item-level rights review are mandatory."
+    },
+    {
+      "id": "world-175",
+      "category": "Quran education and multilingual media",
+      "name": "Bayyinah TV",
+      "url": "https://www.bayyinah.tv/",
+      "scope": "educational-media-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://bayyinahtv.zendesk.com/hc/en-us/categories/35040084164503-Language-Subtitles",
+      "capabilities": [
+        "quran",
+        "tafsir",
+        "arabic",
+        "video",
+        "subtitles",
+        "language_support"
+      ],
+      "languages": [
+        "English",
+        "Urdu support documented; additional subtitle languages require item verification"
+      ],
+      "notes": "Official language/subtitle support documentation confirms multilingual subtitle capability. Primarily audiovisual educational content; acquire transcripts/subtitles only where rights and permitted formats allow."
+    },
+    {
+      "id": "world-177",
+      "category": "Accessible Quran technology",
+      "name": "AccessibleQuran",
+      "url": "https://apps.apple.com/dz/app/accessiblequran/id6758997432",
+      "scope": "accessibility-and-quran-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://apps.apple.com/dz/app/accessiblequran/id6758997432?l=ar",
+      "capabilities": [
+        "quran",
+        "accessibility",
+        "voiceover",
+        "screen_reader",
+        "audio_recitation",
+        "quran_com_api"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "notes": "The current App Store listing documents VoiceOver accessibility and states Quran text/translations come from the Quran.com API and audio from EveryAyah. It is an accessibility client, not itself a rights authority for underlying translations/audio."
+    },
+    {
+      "id": "world-178",
+      "category": "Open Islamic datasets",
+      "name": "Islamic Library Data",
+      "url": "https://github.com/mohammed-2-5/islamic-library-data",
+      "scope": "open-source-dataset-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://github.com/mohammed-2-5/islamic-library-data",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "azkar",
+        "duas",
+        "prophet_stories",
+        "names_of_allah",
+        "tafseer",
+        "json",
+        "cdn",
+        "open_source"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "notes": "Public GitHub repository contains structured JSON datasets for Quran, Hadith, Azkar, Duas, Prophet Stories, Names of Allah and Tafsir, served via jsDelivr. Underlying text provenance/licensing must be audited per dataset before corpus or redistribution use."
+    },
+    {
+      "id": "world-179",
+      "category": "Open Islamic REST API",
+      "name": "Islamic API by SolimanAnas",
+      "url": "https://github.com/SolimanAnas/islamic-api",
+      "scope": "api-and-data-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://github.com/SolimanAnas/islamic-api",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "adhkar",
+        "tafsir",
+        "audio",
+        "duas",
+        "rest_api",
+        "open_api"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "notes": "Public GitHub project documents REST endpoints for Quran, 13 hadith collections, Hisn Muslim, Tafsir and audio. Treat API availability as a technical access signal, not a redistribution license for every underlying work."
     }
   ],
   "notes": [
@@ -1987,6 +2333,9 @@
     "2026-09-24 verification: SeekersGuidance, The New Muslim Guide, and Ilmverse were added after checking their official sites. Their inclusion is a source/discovery record, not blanket permission to redistribute underlying content.",
     "2026-09-24 multilingual expansion: IslamLand, Osoulstore, and Explore Islam were added after web verification because they expose multilingual Islamic books/media and downloadable resources. They are discovery/acquisition candidates; item-level rights remain required.",
     "2026-09-24 multilingual-language expansion: Rasoulallah.net and Zekr were added after primary-source verification; Weg zum Islam was added as a verified German-language acquisition lane. Existing IslamQA/Islamweb/IslamMessage/Tarteel records were enriched with multilingual capabilities where verified.",
-    "2026-09-24 additional multilingual acquisition lanes: Australian Islamic Library, Hadith Hub GO, Al-Hadith Bibliothèque Islam, Hadith Tabsera, and Islamtics Hadith Library were added after current web verification. They expand multilingual hadith coverage; item/data rights remain subject to verification."
+    "2026-09-24 additional multilingual acquisition lanes: Australian Islamic Library, Hadith Hub GO, Al-Hadith Bibliothèque Islam, Hadith Tabsera, and Islamtics Hadith Library were added after current web verification. They expand multilingual hadith coverage; item/data rights remain subject to verification.",
+    "2026-09-24 second audit of روابط.docx and adjacent multilingual acquisition lanes: added GlobalQuran.com, Wathakker, AlQuranTranslation.com, Quran Mercy, UrduPoint Islamic Books, HolyBooks.in, and Nuria after current verification. Duplicate underlying files remain governed by SHA-256 deduplication and rights review.",
+    "2026-09-24 audit continuation: added Download Islamic Religion PDF Ebooks after its current sitemap verified multilingual Islamic-book categories and PDF availability; mixed-source filtering and item-level rights review remain mandatory.",
+    "2026-09-24 third audit of the supplied source list: added verified real-world projects that match requested functions—Basaer Academy, Yaqeen Institute, IOU, Bayyinah TV, Muslim Central, AccessibleQuran, Islamic Library Data, and Islamic API by SolimanAnas. Several descriptive names in the supplied list were not added because no sufficiently verifiable official endpoint was established."
   ]
 }
