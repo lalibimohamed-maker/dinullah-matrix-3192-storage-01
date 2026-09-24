@@ -1,0 +1,2341 @@
+{
+  "schema_version": "1.0.0",
+  "generated": "2026-09-24",
+  "purpose": "Worldwide source-link registry derived from the global multilingual discovery work in PR #541 plus Quran-specific source/API work in PR #558.",
+  "matrix_owner": "PR #541",
+  "quran_layer": "PR #558",
+  "counts": {
+    "links": 171,
+    "rights_review_required": 171,
+    "new_global_links_added_2026_09_24": 44,
+    "previous_snapshot_links": 127
+  },
+  "rules": [
+    "URL is a discovery/source endpoint, not proof of item-level rights.",
+    "API availability is not redistribution permission.",
+    "Institutional or repository status does not automatically authorize public PDF redistribution.",
+    "Item-level license/terms must be captured before public release.",
+    "No source in this registry is treated as an AI translation source."
+  ],
+  "sources": [
+    {
+      "id": "world-001",
+      "category": "Islamic platform",
+      "name": "About Islam",
+      "url": "https://aboutislam.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-002",
+      "category": "Government fatwa",
+      "name": "General Presidency of Scholarly Research and Ifta",
+      "url": "https://alifta.gov.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-003",
+      "category": "Islamic institute",
+      "name": "Alislam Institute",
+      "url": "https://alislaminstitute.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-004",
+      "category": "Quran API",
+      "name": "AlQuran Cloud",
+      "url": "https://alquran.cloud/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-005",
+      "category": "Quran API",
+      "name": "AlQuran Cloud API",
+      "url": "https://api.alquran.cloud/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-006",
+      "category": "Islamic knowledge",
+      "name": "Alukah",
+      "url": "https://www.alukah.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-007",
+      "category": "Islamic API",
+      "name": "Alukah API",
+      "url": "https://api.alukah.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-008",
+      "category": "Video/education",
+      "name": "Bayyinah",
+      "url": "https://bayyinah.tv/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-009",
+      "category": "Fatwa authority",
+      "name": "Dar al-Ifta Egypt",
+      "url": "https://www.dar-alifta.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-010",
+      "category": "Hadith/Islamic research",
+      "name": "Dorar",
+      "url": "https://dorar.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-011",
+      "category": "Hadith API",
+      "name": "Dorar API",
+      "url": "https://dorar.net/api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-012",
+      "category": "Academic dialogue",
+      "name": "Edialogue",
+      "url": "https://edialogue.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-013",
+      "category": "Hadith encyclopedia",
+      "name": "HadeethEnc",
+      "url": "https://hadeethenc.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-014",
+      "category": "Hadith API",
+      "name": "HadeethEnc API",
+      "url": "https://hadeethenc.com/api/v1",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-015",
+      "category": "Hadith encyclopedia",
+      "name": "HadeethEnc English",
+      "url": "https://hadeethenc.com/en/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-016",
+      "category": "Hadith education",
+      "name": "Hadith Academy",
+      "url": "https://hadithacademy.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-017",
+      "category": "Hadith API",
+      "name": "HadithAPI",
+      "url": "https://www.hadithapi.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-018",
+      "category": "Islamic API",
+      "name": "The House of Islam developers",
+      "url": "https://developers.thehouseofislam.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-019",
+      "category": "Islamic API",
+      "name": "The House of Islam API",
+      "url": "https://api.thehouseofislam.com",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-020",
+      "category": "Scholar archive",
+      "name": "Ibn Baz Center",
+      "url": "https://www.ibnbazcenter.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-021",
+      "category": "Quran/fiqh education",
+      "name": "Shatibi",
+      "url": "https://www.shatibi.co.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-022",
+      "category": "University",
+      "name": "International Open University",
+      "url": "https://iou.edu.gm/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-023",
+      "category": "University library",
+      "name": "IOU Libraries",
+      "url": "https://libraries.iou.edu.gm",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-024",
+      "category": "Islamic translations",
+      "name": "IslamEnc",
+      "url": "https://islamenc.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-025",
+      "category": "Multilingual books",
+      "name": "IslamHouse",
+      "url": "https://islamhouse.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-026",
+      "category": "Islamic API",
+      "name": "IslamHouse API",
+      "url": "https://api3.islamhouse.com",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-027",
+      "category": "Islamic downloads",
+      "name": "IslamHouse download host",
+      "url": "https://d1.islamhouse.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-028",
+      "category": "Islamic education",
+      "name": "IslamMessage",
+      "url": "https://islammessage.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights.",
+      "capabilities": [
+        "multilingual_dawah",
+        "books",
+        "quran",
+        "hadith"
+      ]
+    },
+    {
+      "id": "world-029",
+      "category": "Fatwa/Q&A",
+      "name": "IslamQA",
+      "url": "https://islamqa.info/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights.",
+      "languages": [
+        "Arabic",
+        "English",
+        "Indonesian",
+        "Turkish",
+        "French",
+        "Urdu",
+        "Bengali",
+        "Russian",
+        "Spanish",
+        "Persian",
+        "Hindi",
+        "German",
+        "Portuguese",
+        "Chinese",
+        "Uyghur",
+        "Tajik",
+        "Tamil"
+      ],
+      "capabilities": [
+        "multilingual_fatwa",
+        "aqidah",
+        "fiqh",
+        "hadith"
+      ],
+      "verification_status": "web-verified",
+      "verification_url": "https://islamqa.info/en/articles/28"
+    },
+    {
+      "id": "world-030",
+      "category": "Fiqh/fatwa",
+      "name": "IslamQA.org",
+      "url": "https://islamqa.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-031",
+      "category": "Comparative religion",
+      "name": "The Religion of Islam",
+      "url": "https://www.islamreligion.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-032",
+      "category": "Dawah/media",
+      "name": "Islamway",
+      "url": "https://www.islamway.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-033",
+      "category": "Islamic knowledge",
+      "name": "Islamweb",
+      "url": "https://www.islamweb.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights.",
+      "capabilities": [
+        "multilingual_fatwa",
+        "quran",
+        "hadith"
+      ]
+    },
+    {
+      "id": "world-034",
+      "category": "Arabic terminology",
+      "name": "Kalimat",
+      "url": "https://www.kalimat.dev/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-035",
+      "category": "Quran institution",
+      "name": "King Fahd Complex",
+      "url": "https://qurancomplex.gov.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-036",
+      "category": "Quran EPUB",
+      "name": "KFGQPC EPUB",
+      "url": "https://epub.qurancomplex.gov.sa",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-037",
+      "category": "Quran downloads",
+      "name": "KFGQPC download",
+      "url": "https://download.qurancomplex.gov.sa",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-038",
+      "category": "Quran university",
+      "name": "King Saud University Quran",
+      "url": "https://quran.ksu.edu.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-039",
+      "category": "Islamic resources",
+      "name": "Masaq",
+      "url": "https://masaq.online/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-040",
+      "category": "University",
+      "name": "Al-Madinah International University",
+      "url": "https://www.mediu.edu.my/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-041",
+      "category": "Audio",
+      "name": "Muslim Central",
+      "url": "https://muslimcentral.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-042",
+      "category": "Digital Islamic library",
+      "name": "OpenITI",
+      "url": "https://openiti.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-043",
+      "category": "Open source corpus",
+      "name": "OpenITI GitHub",
+      "url": "https://github.com/OpenITI",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-044",
+      "category": "OpenITI raw data",
+      "name": "OpenITI raw",
+      "url": "https://raw.githubusercontent.com/OpenITI",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-045",
+      "category": "Kitab metadata",
+      "name": "Kitab metadata API",
+      "url": "https://dev-kitab-metadata-api.azurewebsites.net",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-046",
+      "category": "Quran corpus",
+      "name": "Tarteel QUL",
+      "url": "https://qul.tarteel.ai/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights.",
+      "capabilities": [
+        "quran_translations",
+        "multilingual_quran"
+      ]
+    },
+    {
+      "id": "world-047",
+      "category": "Tarteel assets",
+      "name": "Tarteel static CDN",
+      "url": "https://static-cdn.tarteel.ai",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights.",
+      "capabilities": [
+        "quran_translations",
+        "multilingual_quran"
+      ]
+    },
+    {
+      "id": "world-048",
+      "category": "Quran API",
+      "name": "Quran.com API",
+      "url": "https://api.quran.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-049",
+      "category": "Quran platform",
+      "name": "Quran.com",
+      "url": "https://quran.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-050",
+      "category": "Quran Foundation docs",
+      "name": "Quran Foundation API docs",
+      "url": "https://api-docs.quran.foundation/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-051",
+      "category": "Quran Foundation API",
+      "name": "Quran Foundation APIs",
+      "url": "https://apis.quran.foundation",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-052",
+      "category": "Quran translations",
+      "name": "QuranEnc",
+      "url": "https://quranenc.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-053",
+      "category": "QuranEnc home",
+      "name": "QuranEnc home",
+      "url": "https://quranenc.com/en/home",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-054",
+      "category": "Islamic biography",
+      "name": "RasoulAllah",
+      "url": "https://rasoulallah.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-055",
+      "category": "Islamic education",
+      "name": "SeekersGuidance",
+      "url": "https://seekersguidance.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-056",
+      "category": "Arabic digital library",
+      "name": "Shamela",
+      "url": "https://shamela.ws/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-057",
+      "category": "Hadith",
+      "name": "Sunnah.com",
+      "url": "https://sunnah.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-058",
+      "category": "Quran translations",
+      "name": "Tanzil",
+      "url": "https://tanzil.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-059",
+      "category": "Quran/AI service",
+      "name": "Tarteel",
+      "url": "https://tarteel.ai/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights.",
+      "capabilities": [
+        "quran_translations",
+        "multilingual_quran"
+      ]
+    },
+    {
+      "id": "world-060",
+      "category": "Tarteel support",
+      "name": "Tarteel Support",
+      "url": "https://support.tarteel.ai",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-061",
+      "category": "Education",
+      "name": "Tebyan Academy",
+      "url": "https://tebyanacademy.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-062",
+      "category": "Research institute",
+      "name": "Yaqeen Institute",
+      "url": "https://yaqeeninstitute.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-063",
+      "category": "Research journals",
+      "name": "Yaqeen Journals",
+      "url": "https://journals.yaqeeninstitute.org",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-064",
+      "category": "Education",
+      "name": "Zad Academy",
+      "url": "https://zad-academy.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-065",
+      "category": "Education/media",
+      "name": "Zad TV",
+      "url": "https://www.zad.tv",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-066",
+      "category": "Islamic education",
+      "name": "Zadi",
+      "url": "https://zadi.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-067",
+      "category": "Quran software",
+      "name": "Zekr",
+      "url": "https://zekr.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-068",
+      "category": "Open source Quran software",
+      "name": "Zekr GitHub",
+      "url": "https://github.com/vdemir/zekr",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-069",
+      "category": "Islamic education",
+      "name": "Chat Islam Online",
+      "url": "https://chatislamonline.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-070",
+      "category": "Islamic resources",
+      "name": "Sultan",
+      "url": "https://www.sultan.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-071",
+      "category": "Fiqh authority",
+      "name": "International Islamic Fiqh Academy",
+      "url": "https://iifa-aifi.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-072",
+      "category": "Education",
+      "name": "Basaer Academy",
+      "url": "https://basaeracademy.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-073",
+      "category": "Education",
+      "name": "Al-Fitrah Academy",
+      "url": "https://www.alfitrahacademy.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-074",
+      "category": "Quran education",
+      "name": "Noon Quran",
+      "url": "https://noonquran.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-075",
+      "category": "Islamic institute",
+      "name": "The Islamic Information Centre UK",
+      "url": "https://theiic.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-076",
+      "category": "Islamic knowledge",
+      "name": "Islam Today",
+      "url": "https://www.islamtoday.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-077",
+      "category": "Manuscripts",
+      "name": "Gallica BnF",
+      "url": "https://gallica.bnf.fr/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-078",
+      "category": "Manuscripts",
+      "name": "vHMML",
+      "url": "https://www.vhmml.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-079",
+      "category": "Manuscripts",
+      "name": "Fihrist",
+      "url": "https://www.fihrist.org.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-080",
+      "category": "Manuscripts",
+      "name": "Leiden Digital Collections",
+      "url": "https://digitalcollections.universiteitleiden.nl/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-081",
+      "category": "Manuscripts",
+      "name": "Princeton Library",
+      "url": "https://library.princeton.edu/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-082",
+      "category": "Manuscripts",
+      "name": "Cambridge Library",
+      "url": "https://www.lib.cam.ac.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-083",
+      "category": "Manuscripts",
+      "name": "British Library",
+      "url": "https://www.bl.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-084",
+      "category": "Manuscripts",
+      "name": "Qatar Digital Library",
+      "url": "https://www.qdl.qa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-085",
+      "category": "Manuscripts",
+      "name": "Al-Furqan Islamic Heritage Foundation",
+      "url": "https://www.al-furqan.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-086",
+      "category": "Global catalog",
+      "name": "WorldCat",
+      "url": "https://search.worldcat.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-087",
+      "category": "Digital library",
+      "name": "HathiTrust",
+      "url": "https://catalog.hathitrust.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-088",
+      "category": "Digital library",
+      "name": "Digital Public Library of America",
+      "url": "https://dp.la/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-089",
+      "category": "Digital library",
+      "name": "Europeana",
+      "url": "https://www.europeana.eu/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-090",
+      "category": "Corpus metadata",
+      "name": "Kitab corpus metadata",
+      "url": "https://kitab-corpus-metadata.azurewebsites.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-091",
+      "category": "Open corpus release",
+      "name": "OpenITI RELEASE",
+      "url": "https://github.com/OpenITI/RELEASE",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-092",
+      "category": "Digital library",
+      "name": "Internet Archive",
+      "url": "https://archive.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-093",
+      "category": "Digital library",
+      "name": "Open Library",
+      "url": "https://openlibrary.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-094",
+      "category": "National library",
+      "name": "Library of Congress",
+      "url": "https://www.loc.gov/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-095",
+      "category": "Books",
+      "name": "Google Books",
+      "url": "https://books.google.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-096",
+      "category": "Bibliographic metadata",
+      "name": "Crossref",
+      "url": "https://www.crossref.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-097",
+      "category": "Research metadata",
+      "name": "OpenAlex",
+      "url": "https://api.openalex.org/works",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-098",
+      "category": "Citation metadata",
+      "name": "OpenCitations",
+      "url": "https://api.opencitations.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-099",
+      "category": "Islamic PDF library",
+      "name": "Waqfeya",
+      "url": "https://waqfeya.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-100",
+      "category": "OCR",
+      "name": "GROBID",
+      "url": "https://github.com/grobidOrg/grobid",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-101",
+      "category": "OCR",
+      "name": "Kraken",
+      "url": "https://kraken.re/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-102",
+      "category": "Manuscript OCR",
+      "name": "eScriptorium",
+      "url": "https://escriptorium.eu/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-103",
+      "category": "Hadith API",
+      "name": "Fawaz Hadith API",
+      "url": "https://github.com/fawazahmed0/hadith-api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-104",
+      "category": "Quran API",
+      "name": "Quran Foundation API docs tafsir",
+      "url": "https://api-docs.quran.foundation/docs/content_apis_versioned/4.0.0/tafsirs/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-105",
+      "category": "Tarteel resources",
+      "name": "Tarteel resources",
+      "url": "https://qul.tarteel.ai/resources",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-106",
+      "category": "Sunnah API docs",
+      "name": "Sunnah.com developers",
+      "url": "https://sunnah.com/developers",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-107",
+      "category": "QuranEnc API",
+      "name": "QuranEnc API",
+      "url": "https://quranenc.com/en/home/api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-108",
+      "category": "Quran Foundation legal",
+      "name": "Quran Foundation developer terms",
+      "url": "https://api-docs.quran.foundation/legal/developer-terms/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-109",
+      "category": "Tanzil documentation",
+      "name": "Tanzil docs",
+      "url": "https://tanzil.net/docs/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-110",
+      "category": "Internet Archive legal",
+      "name": "Internet Archive terms",
+      "url": "https://archive.org/legal/terms.php",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-111",
+      "category": "Ahmadiyya Quran source",
+      "name": "Alislam.org",
+      "url": "https://www.alislam.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "541_or_558",
+      "notes": "Discovery link; API/source access does not itself grant redistribution rights."
+    },
+    {
+      "id": "world-112",
+      "category": "Global manuscript union catalog",
+      "name": "Digital Scriptorium",
+      "url": "https://digital-scriptorium.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://digital-scriptorium.org/",
+      "capabilities": [
+        "manuscript_catalogue",
+        "linked_open_data",
+        "institutional_discovery"
+      ],
+      "notes": "Cross-institutional premodern manuscript discovery across North American member institutions; not a blanket redistribution license."
+    },
+    {
+      "id": "world-113",
+      "category": "Global manuscript catalog",
+      "name": "Digital Scriptorium Catalog",
+      "url": "https://search.digital-scriptorium.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://search.digital-scriptorium.org/",
+      "capabilities": [
+        "manuscript_search",
+        "linked_open_data",
+        "metadata_discovery"
+      ],
+      "notes": "Search portal for manuscript records aggregated from member institutions; item-level rights remain separate."
+    },
+    {
+      "id": "world-114",
+      "category": "Digital library",
+      "name": "Digital Bodleian",
+      "url": "https://digital.bodleian.ox.ac.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.bodleian.ox.ac.uk/node/1568816",
+      "capabilities": [
+        "manuscript_images",
+        "rare_books",
+        "digital_collections"
+      ],
+      "notes": "Bodleian digital collections; public availability of images does not by itself establish redistribution rights for every item."
+    },
+    {
+      "id": "world-115",
+      "category": "Academic digital library",
+      "name": "Yale Arabic and Middle Eastern Electronic Library (AMEEL)",
+      "url": "https://web.library.yale.edu/digital-collections/arabic-and-middle-eastern-electronic-library",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://web.library.yale.edu/digital-collections/arabic-and-middle-eastern-electronic-library",
+      "capabilities": [
+        "arabic_full_text",
+        "ocr",
+        "manuscript_catalogues",
+        "periodicals"
+      ],
+      "notes": "Yale describes approximately 350,000 pages of searchable full text, including Arabic, plus historical manuscript catalogues; access/rights vary during migration."
+    },
+    {
+      "id": "world-116",
+      "category": "Arabic manuscripts",
+      "name": "NYPL Arabic Manuscripts Digital Collection",
+      "url": "https://digitalcollections.nypl.org/collections/29ba5830-c6bb-012f-6243-58d385a7bc34",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://digitalcollections.nypl.org/collections/29ba5830-c6bb-012f-6243-58d385a7bc34",
+      "capabilities": [
+        "arabic_manuscripts",
+        "quran_manuscripts",
+        "religious_treatises",
+        "digital_images"
+      ],
+      "notes": "Collection includes Arabic manuscripts from the 7th to late 19th century, including Qur'an items, religious works, law and history."
+    },
+    {
+      "id": "world-117",
+      "category": "Arabic manuscripts archive",
+      "name": "NYPL Archives & Manuscripts — Arabic manuscripts collection",
+      "url": "https://archives.nypl.org/mss/116",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://archives.nypl.org/mss/116",
+      "capabilities": [
+        "finding_aid",
+        "manuscript_metadata",
+        "digital_assets"
+      ],
+      "notes": "Finding aid for MssCol 116; portions are digitized and the collection has 517 listed image assets."
+    },
+    {
+      "id": "world-118",
+      "category": "Islamic manuscripts",
+      "name": "University of Michigan Islamic Manuscripts",
+      "url": "https://www.lib.umich.edu/collections/collecting-areas/special-collections/islamic-manuscripts/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.lib.umich.edu/collections/collecting-areas/special-collections/islamic-manuscripts/",
+      "capabilities": [
+        "quran",
+        "quran_sciences",
+        "hadith",
+        "fiqh",
+        "theology",
+        "islamic_manuscripts"
+      ],
+      "notes": "More than 1,100 volumes and about 1,800 texts, primarily Arabic, Persian and Ottoman Turkish; many are available via HathiTrust."
+    },
+    {
+      "id": "world-119",
+      "category": "West African Islamic manuscripts",
+      "name": "Library of Congress — Islamic Manuscripts from Mali",
+      "url": "https://www.loc.gov/collections/islamic-manuscripts-from-mali/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.loc.gov/collections/islamic-manuscripts-from-mali/about-this-collection/",
+      "capabilities": [
+        "islamic_manuscripts",
+        "timbuktu",
+        "west_african_arabic_tradition",
+        "digitized_manuscripts"
+      ],
+      "notes": "Over 30 digitized manuscripts from Timbuktu collections; rights must be checked per item."
+    },
+    {
+      "id": "world-120",
+      "category": "Islamic manuscript preservation",
+      "name": "Hill Museum & Manuscript Library — Islamic Manuscripts",
+      "url": "https://hmml.org/collections/islamic/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://hmml.org/collections/islamic/",
+      "capabilities": [
+        "islamic_manuscripts",
+        "west_africa",
+        "ethiopia",
+        "jerusalem_gaza",
+        "yemen",
+        "south_asia",
+        "bosnia"
+      ],
+      "notes": "Global Islamic manuscript holdings spanning multiple regions; discovery/digitization service, not blanket reuse authorization."
+    },
+    {
+      "id": "world-121",
+      "category": "Southeast Asian Islamic manuscripts",
+      "name": "DREAMSEA",
+      "url": "https://hmml.org/research/dreamsea/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://hmml.org/research/dreamsea/",
+      "capabilities": [
+        "islamic_manuscripts",
+        "southeast_asia",
+        "multilingual_manuscripts",
+        "digital_images"
+      ],
+      "notes": "Digital repository project covering Islamic and Buddhist manuscripts across Indonesia, Laos, Thailand, Malaysia and Vietnam."
+    },
+    {
+      "id": "world-122",
+      "category": "Southeast Asian manuscript catalog",
+      "name": "DREAMSEA Manuscripts Catalog",
+      "url": "https://www.hmmlcloud.org/dreamsea/manuscripts.php",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.hmmlcloud.org/dreamsea/manuscripts.php",
+      "capabilities": [
+        "manuscript_search",
+        "language_filtering",
+        "subject_filtering",
+        "iiif_discovery"
+      ],
+      "notes": "Searchable DREAMSEA catalog; individual records can expose IIIF manifests, languages, subjects and page counts."
+    },
+    {
+      "id": "world-123",
+      "category": "European oriental manuscripts",
+      "name": "Staatsbibliothek zu Berlin Digital Collections",
+      "url": "https://digital.staatsbibliothek-berlin.de/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://staatsbibliothek-berlin.de/en/about-the-library/departments/orient/projects/translate-to-english-digitalisierung",
+      "capabilities": [
+        "arabic_manuscripts",
+        "yemeni_manuscripts",
+        "islamic_manuscripts",
+        "digital_images"
+      ],
+      "notes": "SBB documents digitized Arabic/Yemeni and Islamic manuscript holdings; use item-level terms for release decisions."
+    },
+    {
+      "id": "world-124",
+      "category": "Islamic scientific manuscripts",
+      "name": "Islamic Scientific Manuscripts Initiative (ISMI)",
+      "url": "https://ismi.mpiwg-berlin.mpg.de/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://ismi.mpiwg-berlin.mpg.de/",
+      "capabilities": [
+        "scientific_manuscripts",
+        "arabic",
+        "persian",
+        "turkish",
+        "manuscript_metadata"
+      ],
+      "notes": "Specialized discovery and metadata for Islamic scientific manuscripts in multiple languages."
+    },
+    {
+      "id": "world-125",
+      "category": "British manuscript catalogue",
+      "name": "British Library Archives and Manuscripts Catalogue",
+      "url": "https://searcharchives.bl.uk/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://searcharchives.bl.uk/",
+      "capabilities": [
+        "oriental_manuscripts",
+        "arabic",
+        "persian",
+        "ottoman_turkish",
+        "endangered_archives"
+      ],
+      "notes": "Interim catalogue covering Oriental Manuscripts and Endangered Archives material; not all items are digitized or currently available."
+    },
+    {
+      "id": "world-126",
+      "category": "Malay world manuscript research",
+      "name": "Malay World Manuscript Research Centre (PPMAM)",
+      "url": "https://www.ukm.my/atma/en/ppmam-introduction/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.ukm.my/atma/en/ppmam-introduction/",
+      "capabilities": [
+        "malay_manuscripts",
+        "jawi",
+        "arabic",
+        "islamic_religious_texts",
+        "manuscript_research"
+      ],
+      "notes": "UKM research centre for Malay Jawi manuscripts; documents a worldwide research scope and manuscript holdings in libraries, archives and museums."
+    },
+    {
+      "id": "world-127",
+      "category": "Southeast Asian manuscript repository",
+      "name": "UKM Learning and Research Repository — Manuscripts Collection",
+      "url": "https://ptsldigital.ukm.my/jspui/handle/123456789/388864",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "global-expansion-2026-09-24",
+      "verification_status": "web-verified",
+      "verification_url": "https://ptsldigital.ukm.my/jspui/handle/123456789/388864",
+      "capabilities": [
+        "manuscript_metadata",
+        "malay",
+        "jawi",
+        "arabic",
+        "quran_related",
+        "fiqh",
+        "hadith"
+      ],
+      "notes": "78-item manuscript collection; catalogue includes religious works such as Tajwid, Hadith and Hanafi fiqh; file access varies by item."
+    },
+    {
+      "id": "world-128",
+      "category": "Multilingual dawah books",
+      "name": "Osoul Global Center",
+      "url": "https://osoulcenter.com/en/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official Osoul site; multilingual dawah materials. Item-level license/redistribution terms must be verified before acquisition."
+    },
+    {
+      "id": "world-129",
+      "category": "Multilingual Islamic library",
+      "name": "Comprehensive Muslim e-Library (EDC)",
+      "url": "https://www.muslim-library.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "EDC/Al-Najat library; free downloadable PDF catalog in many languages. Item-level rights must be verified before redistribution."
+    },
+    {
+      "id": "world-130",
+      "category": "Multilingual Islamic books",
+      "name": "Conveying Islamic Message Society (CIMS)",
+      "url": "https://www.islamic-message.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Egyptian non-profit society distributing Islamic books and pamphlets in multiple languages. Item-level rights must be verified."
+    },
+    {
+      "id": "world-131",
+      "category": "Islamic technology and education",
+      "name": "Zad Group",
+      "url": "https://zadgroup.net/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Saudi technology/media/publishing group with digital education and content services. No blanket open-license assumption."
+    },
+    {
+      "id": "world-133",
+      "category": "Islamic content JSON API",
+      "name": "Mawthuq Islamic Content Archive",
+      "url": "https://www.mawthuq.net/en/islamic-content-archive/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Provides JSON API access to content from multiple Islamic sites; API access is not itself redistribution permission."
+    },
+    {
+      "id": "world-134",
+      "category": "Official Quran developer resources",
+      "name": "KFGQPC Developer Resources",
+      "url": "https://qurancomplex.gov.sa/en/techquran/dev/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official King Fahd Complex developer/resource page. Specific datasets and translations require item-level rights verification."
+    },
+    {
+      "id": "world-135",
+      "category": "Multilingual Islamic content",
+      "name": "Islamic Content Association / IslamContent",
+      "url": "https://islamiccontent.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Licensed Saudi association for multilingual Islamic content; official site states multilingual production and free electronic availability. Item-level terms still govern redistribution."
+    },
+    {
+      "id": "world-136",
+      "category": "Quran research/API-adjacent",
+      "name": "Tafsir Center for Quranic Studies",
+      "url": "https://tafsir.net/applications",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official Tafsir Center applications/resources, including Quran applications. API/data rights must be verified per resource."
+    },
+    {
+      "id": "world-137",
+      "category": "Hadith AI research platform",
+      "name": "Alminasa.ai — المنصة الحديثية",
+      "url": "https://alminasa.ai/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official platform for hadith research; official site and app materials describe interactive/semantic search, hadith-path visualization, narrator information, explanations and hadith grading tools. AI-assisted features are treated as research/indexing signals, not as independent scholarly evidence."
+    },
+    {
+      "id": "world-138",
+      "category": "Hadith digital encyclopedia",
+      "name": "Hdith.com — الموسوعة الحديثية",
+      "url": "https://hdith.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Digital hadith encyclopedia with structured hadith pages, isnad/narrator information, takhrij and scholar judgments visible on indexed pages. Content/licensing and bulk-access terms require item-level verification before redistribution."
+    },
+    {
+      "id": "world-139",
+      "category": "Official Saudi hadith institution",
+      "name": "King Salman Complex for the Noble Prophetic Hadith",
+      "url": "https://hadith.gov.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official institutional source. Saudi regulations state the Complex serves hadith through collection, classification, verification, study and publication, including multilingual publication and use of modern technologies. Do not assume open/copy-left redistribution without explicit terms."
+    },
+    {
+      "id": "world-140",
+      "category": "Accessibility and Braille infrastructure",
+      "name": "Mubseroon — جمعية العوق البصري الأهلية ببريدة",
+      "url": "https://auq-basry.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official Saudi association serving people with visual disabilities; its site documents Braille-related tools and a Braille learning platform. The stronger claims about a 45-language Islamic Open-API infrastructure were not independently verified, so they are not encoded as facts."
+    },
+    {
+      "id": "world-141",
+      "category": "Official hadith digital encyclopedia",
+      "name": "HadithWeb — جامع خادم الحرمين الشريفين للسنة النبوية المطهرة",
+      "url": "https://sunna.alifta.gov.sa/Home/About",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Officially documented hadith research program presented by the General Presidency for Scholarly Research and Ifta in cooperation with Harf Information Technology. The official description documents 33 core hadith books, 57 supporting works, hadith takhrij, narrator biographies exceeding 18,800 narrators, and other research services. Redistribution/API terms must be verified before acquisition."
+    },
+    {
+      "id": "world-142",
+      "category": "Islamic API",
+      "name": "UmmahAPI",
+      "url": "https://ummahapi.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Public Islamic REST API covering Quran, hadith, tafsir, duas and other services. Official documentation states JSON REST endpoints and currently lists 36,000+ hadith from 10 collections and 12 Quran translations. API availability does not by itself grant redistribution rights for underlying source texts."
+    },
+    {
+      "id": "world-143",
+      "category": "Hadith/Dua application",
+      "name": "Dua & Ruqyah — mrhrifat/dua-ruqyah",
+      "url": "https://github.com/mrhrifat/dua-ruqyah",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Public GitHub repository for a Dua/Ruqyah web app using Quran and hadith references, categories, translations and references. Repository is GPL-3.0, but the license applies to the code and does not automatically relicense third-party religious source data."
+    },
+    {
+      "id": "world-144",
+      "category": "Saudi academic digital library",
+      "name": "Saudi Digital Library (SDL)",
+      "url": "https://sdl.edu.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Candidate institutional academic-library source. Access, bulk acquisition, multilingual availability and redistribution rights must be verified per item/provider; no blanket public-domain claim is asserted."
+    },
+    {
+      "id": "world-145",
+      "category": "Saudi university scholarly sources",
+      "name": "Islamic University of Madinah Digital Library",
+      "url": "https://iu.edu.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official university domain used as an institutional discovery source. Specific digital-library endpoints and item-level rights require verification before acquisition."
+    },
+    {
+      "id": "world-146",
+      "category": "Saudi university scholarly sources",
+      "name": "Umm Al-Qura University",
+      "url": "https://uqu.edu.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official university domain used as an institutional discovery source. Specific library/repository endpoints and item-level rights require verification before acquisition."
+    },
+    {
+      "id": "world-147",
+      "category": "Saudi university scholarly sources",
+      "name": "Imam Mohammad Ibn Saud Islamic University",
+      "url": "https://imamu.edu.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Official university domain used as an institutional discovery source. Specific repository/library endpoints and item-level rights require verification before acquisition."
+    },
+    {
+      "id": "world-148",
+      "category": "Hadith research center",
+      "name": "Tadween Center for Hadith Research and Studies — مركز تدوين",
+      "url": "https://tadween.sa/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://tadween.sa/",
+      "capabilities": [
+        "hadith",
+        "hadith_sciences",
+        "theses",
+        "peer_reviewed_research",
+        "manuscripts",
+        "hadith_terms"
+      ],
+      "notes": "Official Tadween Center site; identifies the center as a non-profit endowment registered in Saudi Arabia and lists databases for theses, peer-reviewed research, manuscripts, Sunnah works and hadith terminology. Item/API access and redistribution rights require verification."
+    },
+    {
+      "id": "world-149",
+      "category": "Islamic heritage digital library",
+      "name": "Al-Furqan Islamic Heritage Foundation Digital Library",
+      "url": "https://digitallibrary.al-furqan.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://digitallibrary.al-furqan.com/our_collections",
+      "capabilities": [
+        "islamic_manuscripts",
+        "quran",
+        "quran_sciences",
+        "hadith",
+        "fiqh",
+        "theology",
+        "maqasid",
+        "multilingual_manuscript_catalog",
+        "islamic_written_heritage"
+      ],
+      "notes": "Official Al-Furqan Digital Library gateway. Its collections include manuscripts, World Collections, Maqasid, library references and publications; the platform documents Islamic manuscript and bibliographic records across many countries and languages. It is a discovery/research gateway, not blanket authorization for PDF redistribution; rights must be verified per item."
+    },
+    {
+      "id": "world-151",
+      "category": "Multilingual new-Muslim education",
+      "name": "The New Muslim Guide",
+      "url": "https://newmuslimguide.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://newmuslimguide.com/en",
+      "capabilities": [
+        "dawah",
+        "new_muslim_education",
+        "fiqh",
+        "aqidah",
+        "multilingual_content"
+      ],
+      "notes": "Official site states the guide was revised and approved by a number of Muslim scholars and translated into 26 languages. The project identifies itself as The New Muslim Guide/Modern Guide; item-level rights are reserved and must be verified before redistribution."
+    },
+    {
+      "id": "world-152",
+      "category": "Islamic scholarship and AI research",
+      "name": "Ilmverse",
+      "url": "https://ilmverse.ai/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://ilmverse.ai/",
+      "capabilities": [
+        "quran",
+        "tafsir",
+        "hadith",
+        "fiqh_four_schools",
+        "seerah",
+        "scholarly_source_linking",
+        "ai_research"
+      ],
+      "notes": "Official site states its library covers Quran/Tafsir, hadith, fiqh in all four schools, Seerah and more, with source-linked answers and scholar testing. Treat AI outputs as indexing/research assistance only; underlying-source rights and bulk access require verification."
+    },
+    {
+      "id": "world-153",
+      "category": "Multilingual Islamic PDF library",
+      "name": "IslamLand",
+      "url": "https://www.islamland.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://islamland.com/eng",
+      "capabilities": [
+        "multilingual_dawah",
+        "books",
+        "pdf",
+        "quran",
+        "hadith",
+        "fatwa",
+        "audio",
+        "video"
+      ],
+      "languages_count": 140,
+      "notes": "Official site states that it introduces Islam in more than 140 languages and contains thousands of books, videos and audios. Indexed book pages expose PDF/Word downloads for multiple language paths. Item-level redistribution rights must still be verified."
+    },
+    {
+      "id": "world-154",
+      "category": "Multilingual Islamic PDF library",
+      "name": "Osoulstore",
+      "url": "https://www.osoulstore.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.osoulstore.com/ar",
+      "capabilities": [
+        "multilingual_dawah",
+        "pdf_books",
+        "aqidah",
+        "hadith",
+        "fiqh",
+        "new_muslim",
+        "non_muslim"
+      ],
+      "languages_count": 56,
+      "notes": "Official Osoul bookstore states 704 books in 56 languages, including 611 PDF books, and lists languages spanning African, Asian, European and other language families. Item-level licensing/redistribution terms must be checked before release."
+    },
+    {
+      "id": "world-155",
+      "category": "Multilingual Islamic books and media",
+      "name": "Explore Islam",
+      "url": "https://explore-islam.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://explore-islam.com/",
+      "capabilities": [
+        "multilingual_books",
+        "pdf",
+        "dawah",
+        "quran",
+        "islamic_education",
+        "articles",
+        "videos"
+      ],
+      "notes": "Official Explore Islam pages expose downloadable ebooks in multiple languages; indexed examples include Romanian and English, and site materials document multilingual Islamic books/media. Underlying item rights must be verified before redistribution."
+    },
+    {
+      "id": "world-158",
+      "category": "Multilingual Islamic education",
+      "name": "Weg zum Islam",
+      "url": "https://wegzumislam.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://wegzumislam.com/ueber-uns",
+      "capabilities": [
+        "german_islamic_education",
+        "hadith",
+        "quran",
+        "books",
+        "pdf",
+        "dawah"
+      ],
+      "languages": [
+        "German"
+      ],
+      "notes": "German-language Sunni-oriented discovery source; its official about page describes Quran, Sunnah, hadith, books and free downloads. It is useful for German-language matrix cells, but it is not itself a multilingual source, so it is recorded as a language-specific lane rather than a global multilingual provider."
+    },
+    {
+      "id": "world-159",
+      "category": "Multilingual Sunni Islamic library",
+      "name": "Australian Islamic Library",
+      "url": "https://www.australianislamiclibrary.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.australianislamiclibrary.org/all-hadith-books.html",
+      "capabilities": [
+        "hadith",
+        "seerah",
+        "aqeedah",
+        "fiqh",
+        "fatawa",
+        "world_languages",
+        "multilingual_books",
+        "pdf"
+      ],
+      "languages": [
+        "English",
+        "Arabic",
+        "Urdu",
+        "German",
+        "and other languages"
+      ],
+      "notes": "Site provides Hadith books in multiple languages and dedicated world-languages, fiqh, aqeedah and fatawa sections. Individual download/copyright terms must be verified before redistribution."
+    },
+    {
+      "id": "world-160",
+      "category": "Multilingual hadith",
+      "name": "Hadith Hub GO",
+      "url": "https://hadith-hub-go.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://hadith-hub-go.com/",
+      "capabilities": [
+        "hadith",
+        "offline_dataset",
+        "multilingual",
+        "kutub_al_sittah",
+        "musnad_ahmad"
+      ],
+      "languages": [
+        "Arabic",
+        "English",
+        "Bengali",
+        "French",
+        "Indonesian",
+        "Russian",
+        "Tamil",
+        "Turkish",
+        "Urdu"
+      ],
+      "notes": "Official site states 12 hadith collections and 9 languages, with the full text held offline. Treat as a discovery/structured-data source; redistribution rights for translations/data require verification."
+    },
+    {
+      "id": "world-161",
+      "category": "Multilingual hadith",
+      "name": "Al-Hadith Bibliothèque Islam",
+      "url": "https://lehadith.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://play.google.com/store/apps/details?id=com.lehadith.twa",
+      "capabilities": [
+        "hadith",
+        "multilingual",
+        "hadith_search",
+        "offline_reading"
+      ],
+      "languages": [
+        "Arabic",
+        "French",
+        "English",
+        "Bengali",
+        "Urdu",
+        "Indonesian",
+        "Russian",
+        "Tamil",
+        "Turkish"
+      ],
+      "notes": "Current app listing states 12 hadith collections, 50,000+ hadith and translations in 9 languages. Source/data licensing and bulk extraction must be verified before acquisition."
+    },
+    {
+      "id": "world-162",
+      "category": "Multilingual hadith",
+      "name": "Hadith Tabsera",
+      "url": "https://hadethtabsera.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://hadethtabsera.org/",
+      "capabilities": [
+        "hadith",
+        "sunnah",
+        "english",
+        "somali",
+        "arabic",
+        "scholarly_explanations"
+      ],
+      "languages": [
+        "Arabic",
+        "English",
+        "Somali"
+      ],
+      "notes": "Official site presents Arabic narrations with English and Somali translations and scholarly explanations; open-access claim is site-level and does not by itself settle redistribution of every underlying translation."
+    },
+    {
+      "id": "world-163",
+      "category": "Multilingual hadith reference",
+      "name": "Islamtics Hadith Library",
+      "url": "https://islamtics.com/hadith/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://islamtics.com/hadith/bukhari/",
+      "capabilities": [
+        "hadith",
+        "bukhari",
+        "multilingual_search",
+        "hadith_books"
+      ],
+      "languages": [
+        "Arabic",
+        "English",
+        "Bengali",
+        "German",
+        "French",
+        "Indonesian",
+        "Russian",
+        "Tamil",
+        "Turkish",
+        "Urdu"
+      ],
+      "notes": "Current hadith pages expose Sahih al-Bukhari in 10 languages. Use as a discovery/reference lane; verify translation provenance and redistribution rights before downloading into public storage."
+    },
+    {
+      "id": "world-164",
+      "category": "Multilingual Quran API and downloadable data",
+      "name": "GlobalQuran.com",
+      "url": "https://globalquran.com/",
+      "scope": "api-and-dataset-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://docs.globalquran.com/",
+      "capabilities": [
+        "quran",
+        "translations",
+        "100_plus_languages",
+        "api",
+        "bulk_download",
+        "json",
+        "xml",
+        "txt",
+        "audio",
+        "images"
+      ],
+      "languages": [
+        "100+ languages"
+      ],
+      "notes": "Official documentation describes REST APIs and downloadable Quran resources; the project documentation also describes 100+ language translations and bulk downloads. Verify each translation's upstream license before redistribution."
+    },
+    {
+      "id": "world-165",
+      "category": "Multilingual Islamic publications",
+      "name": "Wathakker",
+      "url": "https://wathakker.net/",
+      "scope": "book-publication-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified-via-publisher-references",
+      "verification_url": "https://www.islamland.com/eng/books/al-kalim-at-tayyib-the-goodly-words-1432798899",
+      "capabilities": [
+        "books",
+        "pdf",
+        "word",
+        "dawah",
+        "aqeedah",
+        "dhikr",
+        "multilingual"
+      ],
+      "languages": [
+        "English",
+        "Arabic",
+        "French",
+        "Portuguese",
+        "Malay",
+        "Hausa",
+        "and additional language editions"
+      ],
+      "notes": "Current indexed editions identify Wathakker as publisher and expose PDF/Word downloads on multilingual IslamLand mirrors. Treat the Wathakker imprint and each edition's rights separately; do not infer blanket redistribution permission."
+    },
+    {
+      "id": "world-166",
+      "category": "Multilingual Quran downloads",
+      "name": "AlQuranTranslation.com",
+      "url": "https://www.alqurantranslation.com/",
+      "scope": "quran-translation-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.alqurantranslation.com/download-quran-translations/",
+      "capabilities": [
+        "quran",
+        "translations",
+        "120_plus_languages",
+        "pdf",
+        "txt",
+        "mp3",
+        "rar"
+      ],
+      "languages": [
+        "120+ languages"
+      ],
+      "notes": "Current site provides Quran translations and downloadable PDF/text/MP3/RAR packages in 120+ languages. Treat it as an acquisition/discovery source until translator/publisher rights are verified per edition."
+    },
+    {
+      "id": "world-167",
+      "category": "Multilingual Quran downloads",
+      "name": "Quran Mercy",
+      "url": "https://quranmercy.com/",
+      "scope": "quran-translation-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://quranmercy.com/download-quran-translation-rar/",
+      "capabilities": [
+        "quran",
+        "translations",
+        "120_languages",
+        "pdf",
+        "mp3",
+        "rar",
+        "multilingual_pamphlets"
+      ],
+      "languages": [
+        "120+ languages"
+      ],
+      "notes": "Current site exposes Quran translation downloads in 120+ languages and multilingual Islamic pamphlets. It may overlap materially with other multilingual translation mirrors; SHA-256 deduplication must prevent duplicate acquisition."
+    },
+    {
+      "id": "world-168",
+      "category": "Multilingual Islamic books and hadith",
+      "name": "UrduPoint Islamic Books",
+      "url": "https://www.urdupoint.com/islam/islamic-books-pdf.html",
+      "scope": "book-publication-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.urdupoint.com/islam/islamic-books-pdf.html",
+      "capabilities": [
+        "books",
+        "hadith",
+        "sunnah",
+        "quran",
+        "fiqh",
+        "multilingual",
+        "pdf"
+      ],
+      "languages": [
+        "Urdu",
+        "Arabic",
+        "English",
+        "Sindhi",
+        "Hindi",
+        "Bangla",
+        "Tamil",
+        "Pashto",
+        "Malayalam"
+      ],
+      "notes": "Current Islamic-book index lists major hadith works and Islamic books in multiple South Asian languages. Rights and edition provenance must be verified per downloadable item."
+    },
+    {
+      "id": "world-169",
+      "category": "Multilingual Islamic PDF library",
+      "name": "HolyBooks.in",
+      "url": "https://www.holybooks.in/p/islamic-books-pdf-download.html",
+      "scope": "discovery-and-book-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://www.holybooks.in/p/islamic-books-pdf-download.html",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "tafsir",
+        "seerah",
+        "fiqh",
+        "multilingual",
+        "pdf"
+      ],
+      "languages": [
+        "English",
+        "Urdu",
+        "Arabic",
+        "Hindi",
+        "Bengali",
+        "Tamil",
+        "Telugu",
+        "Odia",
+        "and additional languages"
+      ],
+      "notes": "Current site advertises Islamic PDFs across multiple languages and categories. It is an aggregator rather than a blanket rights authority; source/publisher/license must be captured for every acquired item."
+    },
+    {
+      "id": "world-170",
+      "category": "Islamic source discovery and scholarly indexing",
+      "name": "Nuria",
+      "url": "https://nuria.one/",
+      "scope": "research-indexing-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://nuria.one/about/",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "dhikr",
+        "dua",
+        "source_citation",
+        "open_interfaces",
+        "100_plus_languages",
+        "research_indexing"
+      ],
+      "languages": [
+        "100+ languages"
+      ],
+      "notes": "Current site describes Quran, hadith and source-citing Islamic knowledge interfaces. AI responses must remain indexing/retrieval assistance only; underlying cited sources require independent verification before entering the scholarly corpus or download workflow."
+    },
+    {
+      "id": "world-171",
+      "category": "Multilingual Islamic PDF library",
+      "name": "Download Islamic Religion PDF Ebooks",
+      "url": "https://www.download-islamic-religion-pdf-ebooks.com/",
+      "scope": "book-discovery-and-download-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://download-islamic-religion-pdf-ebooks.com/sitemap",
+      "capabilities": [
+        "books",
+        "quran",
+        "sunnah",
+        "hadith",
+        "tafsir",
+        "fiqh",
+        "seerah",
+        "multilingual",
+        "pdf",
+        "direct_links"
+      ],
+      "languages": [
+        "English",
+        "French",
+        "Spanish",
+        "Indonesian",
+        "Turkish",
+        "Persian",
+        "Urdu",
+        "German",
+        "Italian",
+        "Bengali",
+        "Russian",
+        "Hindi",
+        "Malayalam",
+        "Thai",
+        "Filipino",
+        "Albanian",
+        "Amharic",
+        "Bosnian",
+        "Polish",
+        "Chinese",
+        "Portuguese",
+        "Korean",
+        "Japanese",
+        "and other languages"
+      ],
+      "notes": "Current sitemap explicitly lists an Islamic-books section with PDF downloads and a separate 'Islamic Books in Other Languages' section with 23 language categories. The catalog contains mixed material, so Sunni/madhhab and edition provenance filtering plus item-level rights review are mandatory."
+    },
+    {
+      "id": "world-175",
+      "category": "Quran education and multilingual media",
+      "name": "Bayyinah TV",
+      "url": "https://www.bayyinah.tv/",
+      "scope": "educational-media-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://bayyinahtv.zendesk.com/hc/en-us/categories/35040084164503-Language-Subtitles",
+      "capabilities": [
+        "quran",
+        "tafsir",
+        "arabic",
+        "video",
+        "subtitles",
+        "language_support"
+      ],
+      "languages": [
+        "English",
+        "Urdu support documented; additional subtitle languages require item verification"
+      ],
+      "notes": "Official language/subtitle support documentation confirms multilingual subtitle capability. Primarily audiovisual educational content; acquire transcripts/subtitles only where rights and permitted formats allow."
+    },
+    {
+      "id": "world-177",
+      "category": "Accessible Quran technology",
+      "name": "AccessibleQuran",
+      "url": "https://apps.apple.com/dz/app/accessiblequran/id6758997432",
+      "scope": "accessibility-and-quran-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://apps.apple.com/dz/app/accessiblequran/id6758997432?l=ar",
+      "capabilities": [
+        "quran",
+        "accessibility",
+        "voiceover",
+        "screen_reader",
+        "audio_recitation",
+        "quran_com_api"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "notes": "The current App Store listing documents VoiceOver accessibility and states Quran text/translations come from the Quran.com API and audio from EveryAyah. It is an accessibility client, not itself a rights authority for underlying translations/audio."
+    },
+    {
+      "id": "world-178",
+      "category": "Open Islamic datasets",
+      "name": "Islamic Library Data",
+      "url": "https://github.com/mohammed-2-5/islamic-library-data",
+      "scope": "open-source-dataset-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://github.com/mohammed-2-5/islamic-library-data",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "azkar",
+        "duas",
+        "prophet_stories",
+        "names_of_allah",
+        "tafseer",
+        "json",
+        "cdn",
+        "open_source"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "notes": "Public GitHub repository contains structured JSON datasets for Quran, Hadith, Azkar, Duas, Prophet Stories, Names of Allah and Tafsir, served via jsDelivr. Underlying text provenance/licensing must be audited per dataset before corpus or redistribution use."
+    },
+    {
+      "id": "world-179",
+      "category": "Open Islamic REST API",
+      "name": "Islamic API by SolimanAnas",
+      "url": "https://github.com/SolimanAnas/islamic-api",
+      "scope": "api-and-data-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://github.com/SolimanAnas/islamic-api",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "adhkar",
+        "tafsir",
+        "audio",
+        "duas",
+        "rest_api",
+        "open_api"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "notes": "Public GitHub project documents REST endpoints for Quran, 13 hadith collections, Hisn Muslim, Tafsir and audio. Treat API availability as a technical access signal, not a redistribution license for every underlying work."
+    }
+  ],
+  "notes": [
+    "This expanded snapshot is not an exhaustive census of all global sources.",
+    "The 15 additions in this revision were checked against PR #541 and PR #558 diffs and the repository main-branch code search before insertion.",
+    "2026-09-24 verification: Alminasa.ai, Hdith.com, King Salman Hadith Complex, and Mubseroon were added as candidate sources after web verification. Claims about unrestricted/open licensing, exact corpus totals, or a KFUPM 'Hadith Cloud Computing' infrastructure were not asserted without verifiable primary evidence.",
+    "2026-09-24 verification: Tadween Center and Al-Furqan Digital Library were added as verified institutional/discovery sources. Their presence in the registry does not grant redistribution rights; item-level terms remain required.",
+    "2026-09-24 verification: SeekersGuidance, The New Muslim Guide, and Ilmverse were added after checking their official sites. Their inclusion is a source/discovery record, not blanket permission to redistribute underlying content.",
+    "2026-09-24 multilingual expansion: IslamLand, Osoulstore, and Explore Islam were added after web verification because they expose multilingual Islamic books/media and downloadable resources. They are discovery/acquisition candidates; item-level rights remain required.",
+    "2026-09-24 multilingual-language expansion: Rasoulallah.net and Zekr were added after primary-source verification; Weg zum Islam was added as a verified German-language acquisition lane. Existing IslamQA/Islamweb/IslamMessage/Tarteel records were enriched with multilingual capabilities where verified.",
+    "2026-09-24 additional multilingual acquisition lanes: Australian Islamic Library, Hadith Hub GO, Al-Hadith Bibliothèque Islam, Hadith Tabsera, and Islamtics Hadith Library were added after current web verification. They expand multilingual hadith coverage; item/data rights remain subject to verification.",
+    "2026-09-24 second audit of روابط.docx and adjacent multilingual acquisition lanes: added GlobalQuran.com, Wathakker, AlQuranTranslation.com, Quran Mercy, UrduPoint Islamic Books, HolyBooks.in, and Nuria after current verification. Duplicate underlying files remain governed by SHA-256 deduplication and rights review.",
+    "2026-09-24 audit continuation: added Download Islamic Religion PDF Ebooks after its current sitemap verified multilingual Islamic-book categories and PDF availability; mixed-source filtering and item-level rights review remain mandatory.",
+    "2026-09-24 third audit of the supplied source list: added verified real-world projects that match requested functions—Basaer Academy, Yaqeen Institute, IOU, Bayyinah TV, Muslim Central, AccessibleQuran, Islamic Library Data, and Islamic API by SolimanAnas. Several descriptive names in the supplied list were not added because no sufficiently verifiable official endpoint was established."
+  ]
+}
