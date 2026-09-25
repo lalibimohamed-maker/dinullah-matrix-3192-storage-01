@@ -1,0 +1,11 @@
+{
+  "schema": "rechercher/provenance-storage-manifest/v1",
+  "run_id": "36152903713",
+  "source_repository": "lalibimohamed-maker/-dorar-hadith-api-official",
+  "source_ref": "refs/pull/561/merge",
+  "format": "PROV-JSON",
+  "entities": 0,
+  "activities": 0,
+  "agents": 1,
+  "policy": "metadata-only; provenance does not grant redistribution rights"
+}
