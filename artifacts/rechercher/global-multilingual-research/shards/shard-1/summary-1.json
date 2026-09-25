@@ -1,7 +1,7 @@
 {
   "schema": "rechercher/global-multilingual-research-summary/v1",
-  "generated_at": "2026-09-25T05:35:45.128Z",
-  "started_at": "2026-09-25T05:18:11.149Z",
+  "generated_at": "2026-09-25T10:47:06.754Z",
+  "started_at": "2026-09-25T10:27:43.605Z",
   "shard_index": 1,
   "shard_count": 3,
   "language_count": 133,
@@ -11,8 +11,7 @@
   "actual_cells": 1064,
   "verification_counts": {
     "partially-verified": 777,
-    "verified-evidence-chain": 286,
-    "unverified": 1
+    "verified-evidence-chain": 287
   },
   "translation_counts": {
     "not-applicable": 931,
