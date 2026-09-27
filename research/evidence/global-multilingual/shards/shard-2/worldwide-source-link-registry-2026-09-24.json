@@ -1,14 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated": "2026-09-24",
+  "generated": "2026-09-27",
   "purpose": "Worldwide source-link registry derived from the global multilingual discovery work in PR #541 plus Quran-specific source/API work in PR #558.",
   "matrix_owner": "PR #541",
   "quran_layer": "PR #558",
   "counts": {
-    "links": 458,
-    "rights_review_required": 444,
-    "new_global_links_added_2026_09_24": 310,
-    "previous_snapshot_links": 127
+    "links": 515,
+    "rights_review_required": 515,
+    "new_global_links_added_2026_09_24": 332,
+    "previous_snapshot_links": 127,
+    "sources": 515
   },
   "rules": [
     "URL is a discovery/source endpoint, not proof of item-level rights.",
@@ -1619,7 +1620,26 @@
       "scope": "candidate-source",
       "rights_status": "review_required",
       "source_pr": "561",
-      "notes": "Public Islamic REST API covering Quran, hadith, tafsir, duas and other services. Official documentation states JSON REST endpoints and currently lists 36,000+ hadith from 10 collections and 12 Quran translations. API availability does not by itself grant redistribution rights for underlying source texts."
+      "notes": "Official UmmahAPI documentation exposes JSON REST endpoints for Quran, tafsir, hadith, prayer times, Qibla, Hijri calendar, duas, Asma al-Husna and related services. The live Quran endpoint reports Uthmani text, 114 surahs, 6,236 verses and attribution to Tanzil.net (CC BY 3.0), with translations via quran.com. API availability does not itself grant redistribution rights for underlying source texts.",
+      "documentation_url": "https://ummahapi.com/api/docs",
+      "verification_status": "web-verified",
+      "verification_url": "https://ummahapi.com/api/docs",
+      "capabilities": [
+        "quran",
+        "quran_search",
+        "quran_word_by_word",
+        "tafsir",
+        "hadith",
+        "hadith_search",
+        "prayer_times",
+        "qibla",
+        "hijri_calendar",
+        "duas",
+        "asma_ul_husna",
+        "islamic_names",
+        "zakat",
+        "moon"
+      ]
     },
     {
       "id": "world-143",
@@ -8471,6 +8491,676 @@
         "Arabic"
       ],
       "notes": "Current official site explicitly states that the institute follows the Maliki school of jurisprudence and provides Quran, Arabic and Islamic education in The Gambia. It lists staff with studies in Madinah, Al-Azhar and other Islamic institutions and offers Quran memorization and Islamic studies. Added as a Sunni/Maliki institutional source; rights remain item-level review_required."
+    },
+    {
+      "id": "world-461",
+      "category": "Quran memorization / education",
+      "name": "HifzMate",
+      "url": "https://hifzmate.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://hifzmate.com/",
+      "capabilities": [
+        "quran",
+        "memorization",
+        "recitation",
+        "ayah_playback",
+        "learning_resources"
+      ],
+      "notes": "Current first-party site provides Quran memorization tooling with surah/ayah selection, reciter playback, repetition and playlists, plus pronunciation, Arabic-learning, Salah and dua resources. Included as a discovery/service source; application-owned or third-party content and audio remain item-level review_required."
+    },
+    {
+      "id": "world-462",
+      "category": "Islamic mobile app",
+      "name": "Zikrah: Prayer Times & Qibla",
+      "url": "https://apps.apple.com/dz/app/zikrah-prayer-times-qibla/id6755621108?l=fr-FR",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://apps.apple.com/dz/app/zikrah-prayer-times-qibla/id6755621108?l=fr-FR",
+      "capabilities": [
+        "prayer_times",
+        "qibla",
+        "quran",
+        "quran_audio",
+        "dua",
+        "dhikr",
+        "hijri_calendar"
+      ],
+      "notes": "Apple App Store listing describes Quran reading/audio, prayer times with multiple calculation methods and madhhabs, Qibla, dhikr and Hijri calendar. Included as a discovery/service source; application-owned or third-party content and audio remain item-level review_required."
+    },
+    {
+      "id": "world-463",
+      "category": "Islamic education mobile app",
+      "name": "ilmSpace",
+      "url": "https://apps.apple.com/dz/app/ilmspace/id6745206145?l=fr-FR",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://apps.apple.com/dz/app/ilmspace/id6745206145?l=fr-FR",
+      "capabilities": [
+        "quran",
+        "prayer",
+        "dhikr",
+        "islamic_productivity",
+        "islamic_education"
+      ],
+      "notes": "Apple App Store listing describes an Islamic productivity/education app covering prayer, Quran reading, dhikr and focus/productivity tools. Included as a discovery/service source; application-owned or third-party content and audio remain item-level review_required."
+    },
+    {
+      "id": "world-464",
+      "category": "Prayer / mosque technology",
+      "name": "AzanCast",
+      "url": "https://myazancast.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://myazancast.com/",
+      "capabilities": [
+        "prayer_times",
+        "adhan",
+        "mosque_displays",
+        "iqamah",
+        "prayer_notifications"
+      ],
+      "notes": "Current first-party site provides cloud-based adhan automation, location-based prayer times, Shafi/Hanafi Asr options and mosque prayer displays; it states use of adhan-js. Included as a discovery/service source; application-owned or third-party content and audio remain item-level review_required."
+    },
+    {
+      "id": "world-465",
+      "category": "Open-source Quran / Islamic knowledge platform",
+      "name": "Ummah Library",
+      "url": "https://ummahlibrary.org/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://github.com/UmmahLibrary/ummah-library",
+      "capabilities": [
+        "quran",
+        "translations",
+        "tafsir",
+        "hadith",
+        "hifz",
+        "offline_reader",
+        "rest_api",
+        "multilingual",
+        "open_source"
+      ],
+      "notes": "Open-source Quran/Islamic knowledge ecosystem; repository states AGPL-3.0 for software and identifies bundled Uthmani Quran as Tanzil CC-BY 3.0. Third-party content remains item-level rights review."
+    },
+    {
+      "id": "world-466",
+      "category": "Open Quran data / waqf platform",
+      "name": "Quran.ws",
+      "url": "https://quran.ws/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://quran.ws/docs/guidelines/ar/licensing/",
+      "capabilities": [
+        "quran",
+        "open_data",
+        "datasets",
+        "api",
+        "multilingual",
+        "waqf",
+        "developer_resources"
+      ],
+      "notes": "First-party licensing guide states code MIT and published data/content CC BY 4.0 by default, with attribution rules; individual resources may differ."
+    },
+    {
+      "id": "world-467",
+      "category": "Open Quran infrastructure",
+      "name": "Itqan CMS",
+      "url": "https://docs.cms.itqan.dev/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://docs.cms.itqan.dev/",
+      "capabilities": [
+        "quran",
+        "tafsir",
+        "multilingual_translations",
+        "word_metadata",
+        "morphology",
+        "memorization",
+        "open_source",
+        "publisher_metadata"
+      ],
+      "notes": "Open-source Quranic CMS/developer infrastructure emphasizing verified publishers, licensing metadata and multilingual APIs; content rights remain source-specific."
+    },
+    {
+      "id": "world-468",
+      "category": "Open Islamic API / data distribution",
+      "name": "i-muslim API",
+      "url": "https://i-muslim.com/id/downloads",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://i-muslim.com/id/downloads",
+      "capabilities": [
+        "quran",
+        "hadith",
+        "translations",
+        "json_downloads",
+        "api",
+        "multilingual",
+        "license_metadata"
+      ],
+      "notes": "First-party download page states 37,165 hadith translations authored by i-muslim are CC0; upstream-mirrored records are metadata-only until an open-license grant is on file."
+    },
+    {
+      "id": "world-469",
+      "category": "Islamic API directory / integration reference",
+      "name": "Islamic-APIs by alihmada",
+      "url": "https://github.com/alihmada/Islamic-APIs",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "verification_status": "web-verified",
+      "verification_url": "https://github.com/alihmada/Islamic-APIs",
+      "capabilities": [
+        "prayer_times",
+        "quran",
+        "quran_translations",
+        "quran_audio",
+        "tafsir",
+        "hadith",
+        "hadith_search",
+        "azkar",
+        "quran_radio",
+        "api_directory",
+        "integration_reference"
+      ],
+      "notes": "Public GitHub collection documenting live endpoints from AlAdhan, AlQuran Cloud, Quran.com audio, QuranEnc, a hadith API, Azkar sources and Quran radio. It is primarily an aggregator/reference rather than a single API provider. Its README documents endpoints but does not itself establish redistribution rights for the underlying datasets/services; verify each upstream provider and content license before acquisition or redistribution."
+    },
+    {
+      "id": "world-470",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "Al-Quran API",
+      "url": "https://alquran-api.pages.dev/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-471",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "QuranHub by Misraj AI",
+      "url": "https://github.com/misraj-ai/quranhub",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-472",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "Sunnah Now",
+      "url": "https://github.com/sunnah-now",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-473",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "AhmedBaset Hadith API",
+      "url": "https://github.com/AhmedBaset/hadith-api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-474",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "saikothasan Hadith API",
+      "url": "https://github.com/saikothasan/hadithapi",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-475",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "Tarteel / Quranic Universal Library",
+      "url": "https://tarteel.ai/fr",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-476",
+      "category": "Islamic API / Quran / Hadith source",
+      "name": "Sunnah.com Official API",
+      "url": "https://github.com/sunnah-com/api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Discovery link added to the worldwide source registry. API/software availability does not itself grant redistribution rights; verify provider terms, content provenance, edition identity and item-level rights before acquisition or redistribution."
+    },
+    {
+      "id": "world-477",
+      "category": "Islamic knowledge API",
+      "name": "Aslam Islamic Knowledge Base",
+      "url": "https://github.com/asim/aslam",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Searchable Quran, hadith, seerah, adhkar and scholarly reference datasets; item-level source and redistribution rights require verification."
+    },
+    {
+      "id": "world-478",
+      "category": "Arabic manuscript HTR dataset",
+      "name": "RASAM Dataset",
+      "url": "https://github.com/calfa-co/rasam-dataset",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Open Maghrebi Arabic HTR ground truth with IIIF-linked manuscript images; verify dataset license and underlying library image rights separately."
+    },
+    {
+      "id": "world-479",
+      "category": "Arabic manuscript HTR dataset",
+      "name": "TariMa Dataset",
+      "url": "https://github.com/calfa-co/tarima",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Maghrebi Arabic manuscript/print HTR ground truth with BnF/BULAC/MMSH provenance and IIIF access; item-level rights must be retained."
+    },
+    {
+      "id": "world-480",
+      "category": "Quran learning/relation data",
+      "name": "HifzLink",
+      "url": "https://github.com/srmdn/hifzlink",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Quran relation/mutashabihat tooling and imported translation/tafsir data; upstream dataset rights must be verified."
+    },
+    {
+      "id": "world-481",
+      "category": "Quran tafsir dataset",
+      "name": "Mosahaf Tafseer JSON Dataset",
+      "url": "https://github.com/meibassam/mosahaf-tafseer",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Structured Quran and multiple tafsir datasets; source-text and redistribution rights must be verified per tafsir."
+    },
+    {
+      "id": "world-482",
+      "category": "Islamic educational API",
+      "name": "IslamicQuizAPI",
+      "url": "https://github.com/rn0x/IslamicQuizAPI",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "JSON/SQLite/CSV educational questions spanning tafsir, aqidah, hadith, fiqh, history and Arabic; source origin does not by itself grant redistribution rights."
+    },
+    {
+      "id": "world-483",
+      "category": "Islamic audio API",
+      "name": "Islamic Radio API",
+      "url": "https://github.com/uthumany/islamic-radio-api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Open API exposing Quran/Islamic radio stream metadata; API license does not automatically grant rights to underlying station streams."
+    },
+    {
+      "id": "world-484",
+      "category": "Islamic application/API",
+      "name": "Reminder — Quran/Hadith/Names API",
+      "url": "https://github.com/asim/reminder",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561",
+      "notes": "Local-first Quran, hadith and Names of Allah application/API with RAG; upstream content rights and model terms require separate verification."
+    },
+    {
+      "id": "world-483",
+      "category": "Hadith dataset",
+      "name": "Open Hadith Data",
+      "url": "https://github.com/Jaguar16/open-hadith-data",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Structured dataset extracted from sunnah.com: major Sunni collections plus additional collections, Arabic/English fields, isnad/matn separation and grading fields. Repository declares code MIT and structured data CC0; English translations remain subject to sunnah.com terms, so translation rights are kept separate."
+    },
+    {
+      "id": "world-484",
+      "category": "Hadith knowledge graph",
+      "name": "الجامع — Hadith Knowledge Graph",
+      "url": "https://github.com/qataruts/hadith",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Arabic-first hadith research graph with hundreds of classical collections, linked isnad/narrator data, meaning groups and subject tree. Published built databases are declared CC BY 4.0; upstream provenance and any item-level rights must remain attached before redistribution."
+    },
+    {
+      "id": "world-485",
+      "category": "Quran knowledge graph",
+      "name": "مشكاة — Quran Knowledge Graph",
+      "url": "https://github.com/qataruts/quran",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Quran knowledge-graph/PWA source with 6,236-ayah canonical shape validation, verse-linked classical references, QAC morphology and Tanzil Uthmani sources. Application code is MIT, while bundled source data retains upstream licenses; do not collapse those licenses."
+    },
+    {
+      "id": "world-486",
+      "category": "Fiqh corpus",
+      "name": "Fiqh Corpus — Arabic Digital Humanities",
+      "url": "https://github.com/arabic-digital-humanities/fiqh",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Approx. 49.33M-token Arabic fiqh corpus spanning Hanafi, Shafi'i, Maliki, Hanbali and Ja'fari subcorpora in OpenITI markup. Source/license varies by book origin; preserve madhhab and source metadata and never silently merge the Ja'fari lane into Sunni fiqh."
+    },
+    {
+      "id": "world-487",
+      "category": "Bibliographic metadata",
+      "name": "KITAB / OpenITI metadata for DLME",
+      "url": "https://github.com/kitab-project-org/kitab_metadata_for_DLME",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Machine-readable metadata for OpenITI digital text versions and KITAB text-reuse data, including author/title, edition information, full-text URLs, OCR flags and text-reuse links. Useful for work/edition/provenance identity; verify metadata and linked-text licensing separately."
+    },
+    {
+      "id": "world-488",
+      "category": "Quran Tajweed",
+      "name": "Quran Tajweed annotations",
+      "url": "https://github.com/cpfair/quran-tajweed",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Character-indexed Hafs tajweed annotations and decision trees; annotation data is CC BY 4.0, while the referenced Tanzil Uthmani text remains under Tanzil terms. Repository is not actively maintained, so treat it as a compatibility/reference source rather than an authoritative active API."
+    },
+    {
+      "id": "world-489",
+      "category": "Quran audio alignment",
+      "name": "Quran Align",
+      "url": "https://github.com/cpfair/quran-align",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Word-precise Qur'an recitation segmentation with downloadable word-by-word timing data; timing data is CC BY 4.0. Treat the underlying recordings and source Quran text as separately governed upstream assets."
+    },
+    {
+      "id": "world-490",
+      "category": "Quran audio dataset",
+      "name": "Qur'anic Universal Audio",
+      "url": "https://github.com/QUD-Technologies/quranic-universal-audio",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Unified recitation/timestamp catalogue with word- and letter-level timing, validation and versioning. Project code/timestamps/catalog metadata are CC BY 4.0; recitation recordings remain owned by their original upstream sources."
+    },
+    {
+      "id": "world-491",
+      "category": "Hadith corpus",
+      "name": "Leeds–King Saud University Hadith Corpus",
+      "url": "https://github.com/ShathaTm/LK-Hadith-Corpus",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Bilingual Arabic-English corpus of 39,038 annotated hadiths from the six canonical collections, with separate isnad/matn/grade fields. Use as research/parallel-corpus input; verify corpus licensing and upstream text rights before redistribution."
+    },
+    {
+      "id": "world-492",
+      "category": "Seerah API",
+      "name": "Quran-Hadith-Dua-Seerah API",
+      "url": "https://github.com/aquibhussain12/Quran-Hadith-Dua-API",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "API project exposing Quran, Hadith, Duas and Seerah endpoints, including chapter-based Seerah access. Database access is described as separately supplied by the maintainer; no item-level redistribution license was established."
+    },
+    {
+      "id": "world-493",
+      "category": "Multilingual Quran/Hadith API",
+      "name": "Islam Companion Web API",
+      "url": "https://github.com/pakjiddat/Islam-Companion-Web-Api",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "REST API exposing Quran translations in 42 languages and Hadith translations in Arabic, English and Urdu. Treat translation/text licensing and provenance as separate fields before acquisition."
+    },
+    {
+      "id": "world-494",
+      "category": "Islamic digital library",
+      "name": "Kizana",
+      "url": "https://github.com/elkizana/kizana",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Open-source desktop Quran/Islamic-library application describing a collection of about 8,000 books and an external database archive. Application is open source; bundled book database is attributed to al-Maktaba al-Shamela and must be reviewed item-by-item for rights/provenance."
+    },
+    {
+      "id": "world-495",
+      "category": "Open Islamic text metadata",
+      "name": "OpenITI Annotation metadata templates",
+      "url": "https://github.com/OpenITI/Annotation",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Structured author/book metadata templates encoding dates, genres, manuscript, edition, translation, study and link relations. Useful for work/edition identity and scholarly provenance; verify repository/data licensing separately."
+    },
+    {
+      "id": "world-496",
+      "category": "Islamic manuscript portal",
+      "name": "Biblissima Portal",
+      "url": "https://portail.biblissima.fr/en/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Portal for medieval and Renaissance written heritage with manuscript search, authority data and interoperable digitized objects. Item-level rights remain repository-specific."
+    },
+    {
+      "id": "world-497",
+      "category": "IIIF manuscript API",
+      "name": "Biblissima IIIF Collections API",
+      "url": "https://doc.biblissima.fr/api/api-presentation/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Documentation for IIIF Presentation collections and manifests used to group digitized manuscripts and editions; useful for machine acquisition and provenance, with item-level rights preserved."
+    },
+    {
+      "id": "world-498",
+      "category": "Islamic manuscripts",
+      "name": "HMML Reading Room",
+      "url": "https://www.vhmml.org/readingRoom",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Searchable manuscript repository with Islamic manuscripts across Africa, the Middle East and Asia; records expose IIIF links. Digital copies remain governed by holding repositories and HMML access terms."
+    },
+    {
+      "id": "world-499",
+      "category": "Classical Islamic text library",
+      "name": "Fihrist Digital",
+      "url": "https://www.fihrist.digital/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Free classical Islamic scholarship library covering fiqh, hadith, tafsir, kalam and related disciplines; book pages expose source family and applicable rights/license status. Verify each title before reuse."
+    },
+    {
+      "id": "world-500",
+      "category": "Official Quran API documentation",
+      "name": "Quran Foundation API Docs — current",
+      "url": "https://api-docs.quran.com/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Current official developer documentation for Quran Foundation APIs. Documents Content APIs for Quran text, chapters, verses, translations, tafsirs, audio, recitations, pages and structural resources; Search APIs; OAuth2; and SDKs. API access/authentication is documented here, but API availability is not redistribution permission."
+    },
+    {
+      "id": "world-501",
+      "category": "Quran API v4",
+      "name": "Quran Foundation Content API v4 documentation",
+      "url": "https://api-docs.quran.com/docs/content_apis_versioned/4.0.0/content-apis/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Official v4 Content API reference. Includes Quran, verses, translations, tafsirs, audio, recitations, pages and linked Hadith resources. Production access requires approved credentials; preserve source/resource metadata and rights separately."
+    },
+    {
+      "id": "world-502",
+      "category": "Quran offline synchronization",
+      "name": "Quran Foundation Content Sync documentation",
+      "url": "https://api-docs.quran.com/docs/tutorials/content-sync/getting-started/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Official Content Sync workflow using snapshot/sync tokens and incremental changes. Supports quran_core, mushafs, translations, word-by-word translations/transliterations, tafsirs, recitations, chapter recitations and articles. Useful as a controlled refresh connector; sync permission does not itself grant public redistribution rights."
+    },
+    {
+      "id": "world-503",
+      "category": "Quran API OAuth documentation",
+      "name": "Quran Foundation OAuth2 Token Exchange",
+      "url": "https://api-docs.quran.com/docs/oauth2_apis_versioned/1.0.0/oauth-2-token-exchange/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Official OAuth2 token endpoint documentation covering client_credentials, authorization_code and refresh_token exchanges, token expiry, scopes and error handling. Authentication documentation is an integration dependency, not content redistribution permission."
+    },
+    {
+      "id": "world-504",
+      "category": "Quran API SDK documentation",
+      "name": "Quran Foundation API Reference",
+      "url": "https://api-docs.quran.com/docs/api-reference/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_deep_research_2026_09_27",
+      "notes": "Official API-family reference covering Content, Search, User and OAuth2 APIs. Useful as the canonical discovery index for Rechercher connectors; access rights and content rights remain distinct."
+    },
+    {
+      "id": "world-505",
+      "category": "API developer documentation",
+      "name": "Quran Foundation OAuth2 APIs",
+      "url": "https://api-docs.quran.com/docs/oauth2_apis_versioned/1.0.0/oauth-2-apis/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official OAuth2/OIDC API family reference covering authorization, token exchange, introspection, OIDC userinfo and logout. Authentication capability does not grant content redistribution rights."
+    },
+    {
+      "id": "world-506",
+      "category": "Quran API",
+      "name": "Quran Foundation Search API",
+      "url": "https://api-docs.quran.com/docs/search_apis_versioned/1.0.0/quran-foundation-search-api/",
+      "scope": "candidate-source",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official Search API family for programmatic Quran search over verses, chapters, juz, pages and translations. Requires the documented search authentication/scope."
+    },
+    {
+      "id": "world-507",
+      "category": "SDK documentation",
+      "name": "Quran Foundation SDKs",
+      "url": "https://api-docs.quran.com/docs/sdk/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official SDK hub for JavaScript/TypeScript and Python, including runtime, authentication, API coverage, examples and migration guidance."
+    },
+    {
+      "id": "world-508",
+      "category": "SDK documentation",
+      "name": "Quran Foundation JavaScript SDK",
+      "url": "https://api-docs.quran.com/docs/sdk/javascript/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official JS/TS SDK documentation. Current docs define separate @quranjs/api/server and @quranjs/api/public entrypoints and distinguish backend/server credentials from browser/mobile PKCE flows."
+    },
+    {
+      "id": "world-509",
+      "category": "SDK documentation",
+      "name": "Quran Foundation Python SDK",
+      "url": "https://api-docs.quran.com/docs/sdk/python/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official server-side Python SDK documentation; package is published on PyPI as quran-foundation-api. Treat package/data terms separately from API access rights."
+    },
+    {
+      "id": "world-510",
+      "category": "Pre-live API documentation",
+      "name": "Quran Foundation User APIs (Pre-live)",
+      "url": "https://api-docs.quran.com/docs/user_related_apis_prelive/user-related-apis/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official pre-live user-related API documentation. Pre-live credentials, base URLs, callback/session behavior and test data must remain isolated from production."
+    },
+    {
+      "id": "world-511",
+      "category": "API schema documentation",
+      "name": "Quran Foundation Field Reference",
+      "url": "https://api-docs.quran.com/docs/api/field-reference/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official field-reference page for stable content field selectors and response-shaping decisions."
+    },
+    {
+      "id": "world-512",
+      "category": "OAuth2 documentation",
+      "name": "Quran Foundation OAuth2 Scopes",
+      "url": "https://api-docs.quran.com/docs/user_related_apis_versioned/scopes/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official scope reference used to constrain access by capability. Scope availability must be treated as an authorization contract, not a redistribution license."
+    },
+    {
+      "id": "world-513",
+      "category": "Content synchronization",
+      "name": "Quran Foundation Offline Content Cache Patterns",
+      "url": "https://api-docs.quran.com/docs/tutorials/content-sync/offline-cache-patterns/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official cache/sync architecture guidance: server remains source of truth, local storage is a readable cache, incremental sync uses a dedicated sync state and idempotent keys."
+    },
+    {
+      "id": "world-514",
+      "category": "Content synchronization",
+      "name": "Quran Foundation Full Copies and Recovery",
+      "url": "https://api-docs.quran.com/docs/tutorials/content-sync/full-copies-and-recovery/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official full-copy/recovery tutorial for resource snapshots and rebuilding local content state when incremental synchronization is insufficient."
+    },
+    {
+      "id": "world-515",
+      "category": "Developer access",
+      "name": "Quran Foundation Request Access",
+      "url": "https://api-docs.quran.com/request-access/",
+      "scope": "engineering-reference",
+      "rights_status": "review_required",
+      "source_pr": "561_refresh_2026_09_27",
+      "notes": "Official developer access request flow, including client URL, privacy policy, terms and redirect URI configuration."
     }
   ],
   "notes": [
@@ -8516,7 +9206,11 @@
     "2026-09-25 follow-up verification: added HadithBD, Ilmiyyah Islamic Resources, and IslamHouse by MuslimThaiPost after checking their live content. HadithBD and Ilmiyyah have explicit Ahlus Sunnah/Salafi-oriented material; IslamHouse was retained as a Thai-language Sunni-oriented discovery candidate based on its Quran, hadith and Sunnah-focused content, while institutional affiliation remains review_required.",
     "2026-09-25 deep verification round 2: added six distinct institutional/educational discovery sources plus Easy Fiqh community channel after live-source checks. Explicit Sunni/Shafi'i identity was recorded only where the first-party source stated it; other sources remain discovery candidates with rights_review_required.",
     "2026-09-25 targeted verification: added Baraheen Network, Islam For All, Taymiyyah Institute and Al-Imam Malick Islamic Institute. Baraheen and Taymiyyah have current first-party Sunni-oriented evidence; Al-Imam Malick explicitly states Maliki jurisprudence. Islam For All was preserved as a multilingual Islamic e-library/discovery lane using domain identity plus historical evidence, but its present operational status was not independently re-established in this pass.",
-    "2026-09-25 exclusion policy reaffirmed: The Global Message and Hadith Data Bank are not part of the Sunni source registry and are not retained as Sunni candidates."
+    "2026-09-25 exclusion policy reaffirmed: The Global Message and Hadith Data Bank are not part of the Sunni source registry and are not retained as Sunni candidates.",
+    "2026-09-27: verified and enriched the existing UmmahAPI record with its official API documentation and live Quran endpoint; added HifzMate, Zikrah, ilmSpace, and AzanCast as distinct Quran/Islamic application and service discovery lanes. All remain review_required and no redistribution rights are inferred.",
+    "2026-09-27 global design/product radar: added Ummah Library, Quran.ws, Itqan CMS and i-muslim as verified source/design-infrastructure lanes. These records are discovery/design inputs; content rights remain asset-level unless an explicit license states otherwise.",
+    "2026-09-27: added alihmada/Islamic-APIs as a verified integration-reference source; underlying API/data rights remain provider-specific.",
+    "2026-09-27 deep Rechercher radar: added structured hadith data, hadith/Quran knowledge-graph sources, fiqh corpus, KITAB/OpenITI metadata, and Hafs tajweed annotations after repository/readme/license checks. Mixed-school or upstream-dependent rights remain review_required."
   ],
   "change_log": [
     "2026-09-24: added 6 supplied source-discovery endpoints to the canonical registry: https://saleh.af.org.sa/ar/books?page=1, https://www.sualruhaily.com, https://alshathri.net, https://af.org.sa, https://www.nusuk.sa, https://www.rabita.fi/en#services. All remain review_required; no redistribution permission is inferred.",
@@ -8525,6 +9219,122 @@
     "2026-09-25: added 2 distinct official Sunni acquisition/discovery endpoints from the supplied source set; exact parent URLs were already registered, so only materially useful sub-endpoints were added.",
     "2026-09-25: added 2 verified source-discovery endpoints: https://tebyanacademy.com/ and https://www.nusuk.sa/. Existing exact URLs were checked before insertion; both remain review_required.",
     "2026-09-25 deep source radar follow-up: +3 verified source lanes; Al-Islam.org was deliberately excluded from the Sunni registry because its own About page states particular emphasis on Twelver Shia Islam. MyIslam was not classified as Sunni without sufficient first-party sectarian identification. Unverified named projects from the supplied list remain pending rather than being fabricated.",
-    "2026-09-25 deep source radar round 2: +7 sources (Erth Al Mustafa, IslamicInfo, Ṣifah, International Seerah Council, Al Imam Institute, Imam Al-Shatibi Global Quran Platform, Easy Fiqh). The previously named Global Message/Baraheen/IslamForAll/Ibn Taymiyyah Virtual Institute/Fiqh of Minorities/Islam Verified and similar names remain unregistered because no sufficiently reliable first-party identity was established in this round."
-  ]
+    "2026-09-25 deep source radar round 2: +7 sources (Erth Al Mustafa, IslamicInfo, Ṣifah, International Seerah Council, Al Imam Institute, Imam Al-Shatibi Global Quran Platform, Easy Fiqh). The previously named Global Message/Baraheen/IslamForAll/Ibn Taymiyyah Virtual Institute/Fiqh of Minorities/Islam Verified and similar names remain unregistered because no sufficiently reliable first-party identity was established in this round.",
+    "2026-09-27: added verified HifzMate, Zikrah, ilmSpace and AzanCast source/discovery endpoints; enriched existing UmmahAPI (world-142) with official documentation and live endpoint metadata. Application/service presence does not grant redistribution rights.",
+    "2026-09-27: global design-intelligence pass added a structured product/capability taxonomy and four newly verified open-source/licensing-aware Quran/Islamic infrastructure sources. No new branch was created; changes remain on PR #561 branch.",
+    "2026-09-27: added world-469 Islamic-APIs aggregator/reference to the worldwide registry; no underlying content rights were inferred.",
+    {
+      "date": "2026-09-27",
+      "change": "Added Quran/Hadith API and institutional source links supplied for PR #561; kept rights review-required and separate from Rechercher Ω execution connectors.",
+      "source_pr": "561"
+    },
+    {
+      "date": "2026-09-27",
+      "change": "Added world-483 through world-488 from deep source and infrastructure research; no new branch created.",
+      "source_pr": "561"
+    }
+  ],
+  "design_intelligence": {
+    "status": "active",
+    "purpose": "Capture reusable product, information-architecture, API, metadata, multilingual, provenance and rights patterns discovered from the worldwide source registry without copying proprietary content or designs.",
+    "separation_of_concerns": [
+      "source_discovery",
+      "content_provenance",
+      "rights",
+      "api_execution",
+      "acquisition",
+      "canonical_corpus",
+      "product_ux"
+    ],
+    "capability_taxonomy": [
+      "quran",
+      "quran_search",
+      "translations",
+      "tafsir",
+      "hadith",
+      "hadith_search",
+      "fiqh",
+      "aqidah",
+      "seerah",
+      "books",
+      "manuscripts",
+      "audio",
+      "recitation",
+      "memorization",
+      "prayer_times",
+      "qibla",
+      "hijri_calendar",
+      "duas",
+      "dhikr",
+      "zakat",
+      "multilingual",
+      "ocr",
+      "metadata",
+      "bibliography",
+      "api",
+      "offline",
+      "accessibility",
+      "education"
+    ],
+    "product_surfaces": [
+      "home",
+      "global_search",
+      "quran_reader",
+      "hadith_reader",
+      "book_reader",
+      "manuscript_viewer",
+      "scholar_profile",
+      "source_profile",
+      "translation_compare",
+      "tafsir_compare",
+      "audio_player",
+      "hifz_mode",
+      "prayer_dashboard",
+      "qibla",
+      "hijri_calendar",
+      "zakat_calculator",
+      "library",
+      "download_center",
+      "citations_provenance",
+      "rights_notice",
+      "settings_language"
+    ],
+    "design_principles": [
+      "Arabic canonical text remains distinct from translations",
+      "every imported work keeps source edition and provenance",
+      "rights are item-level and fail-closed",
+      "API availability never implies redistribution permission",
+      "language is a first-class dimension",
+      "search spans content types while preserving type-specific ranking and metadata",
+      "source refresh never writes directly to canonical Corpus",
+      "design inspiration is abstracted into reusable patterns rather than copied branding or proprietary UI"
+    ],
+    "global_scan_2026_09_27": [
+      "open-source Quran/Islamic ecosystem platforms",
+      "open Quran licensing/data projects",
+      "Quran CMS/developer infrastructure",
+      "per-record license-aware Islamic API distributions",
+      "community-maintained Islamic API directories and integration maps"
+    ],
+    "missing_focus_areas": [
+      "unified source/edition/work identity graph",
+      "per-asset license registry",
+      "language/translation quality metadata",
+      "scholar and institution authority records",
+      "citation graph across Quran-hadith-tafsir-books",
+      "accessibility and low-bandwidth/offline UX",
+      "API connector health and contract tests",
+      "design pattern provenance and attribution"
+    ],
+    "source_refs": [
+      "world-465",
+      "world-466",
+      "world-467",
+      "world-468",
+      "world-469"
+    ]
+  },
+  "latest_refresh": "2026-09-27",
+  "latest_refresh_links_added": 11,
+  "latest_refresh_scope": "Quran Foundation developer/API documentation families for OAuth2/OIDC, Search, SDKs, Pre-live, Field/Scopes and Content Sync"
 }
