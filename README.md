@@ -1,8 +1,8 @@
-# dinullah-matrix-3192-storage-01
+# dinullah-matrix-6384-storage-01
 
-Dedicated storage for Rechercher's 3,192-cell global multilingual Islamic resource matrix.
+Dedicated storage for Rechercher's 6,384-cell global multilingual Islamic resource matrix.
 
-- Matrix: 133 languages × 24 Islamic domains = 3,192 cells.
+- Matrix: 133 languages × 48 Islamic domains = 6,384 cells.
 
 ## Storage routes
 
