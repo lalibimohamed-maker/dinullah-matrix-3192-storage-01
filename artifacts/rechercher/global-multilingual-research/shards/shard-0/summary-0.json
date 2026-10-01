@@ -1,22 +1,23 @@
 {
   "schema": "rechercher/global-multilingual-research-summary/v1",
-  "generated_at": "2026-09-29T22:02:40.335Z",
-  "started_at": "2026-09-29T21:34:17.653Z",
+  "generated_at": "2026-10-01T00:21:46.097Z",
+  "started_at": "2026-09-30T23:44:30.992Z",
   "shard_index": 0,
   "shard_count": 3,
   "language_count": 133,
-  "domain_count": 37,
-  "expected_total_cells": 4921,
-  "expected_shard_cells": 1641,
-  "actual_cells": 1641,
+  "domain_count": 48,
+  "expected_total_cells": 6384,
+  "expected_shard_cells": 2128,
+  "actual_cells": 2128,
   "verification_counts": {
-    "partially-verified": 1205,
-    "verified-evidence-chain": 436
+    "partially-verified": 1553,
+    "verified-evidence-chain": 574,
+    "unverified": 1
   },
   "translation_counts": {
-    "translation-needed": 167,
-    "not-applicable": 1461,
-    "source-verified": 13
+    "translation-needed": 90,
+    "not-applicable": 1995,
+    "source-verified": 43
   },
   "canonical_arabic_overwrite_cells": 0,
   "machine_translation_cells": 0,
