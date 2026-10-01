@@ -1,0 +1,20 @@
+{
+  "prefix": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "din": "urn:dinullah:"
+  },
+  "entity": {},
+  "activity": {},
+  "agent": {
+    "din:agent:rechercher": {
+      "prov:type": "prov:Agent",
+      "prov:label": "DinAllah-Rechercher",
+      "din:tool": "DinAllah-Rechercher/multilingual-pdf-acquisition"
+    }
+  },
+  "used": {},
+  "wasGeneratedBy": {},
+  "wasAssociatedWith": {},
+  "hadPrimarySource": {},
+  "wasDerivedFrom": {}
+}
