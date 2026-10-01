@@ -4,31 +4,28 @@ Dedicated storage for Rechercher's 6,384-cell global multilingual Islamic resour
 
 - Matrix: 133 languages × 48 Islamic domains = 6,384 cells.
 
-## Storage routes
+## PDF acquisition and delivery
 
-This storage has two logical access routes:
+PDF bytes are Release-only in this repository.
 
-- **Public route**: verified matrix artifacts that are permitted for public publication.
-- **Protected route**: developer/private matrix artifacts that require restricted access. The protected route MUST use a permissioned/private backend; this public GitHub repository is never used as the protected backend.
-
-The two routes are **access states, not two copies of the same artifact**.
+- Rechercher acquires and verifies source PDFs against the 6,384-cell matrix contract.
+- Publicly redistributable PDFs are published as assets of GitHub Releases in this repository.
+- Research-only or rights-blocked source files remain in the separate protected storage path.
+- Git LFS is not used for PDF storage in this repository.
+- `.pdf.enc`, `.enc`, and `.encrypted` PDF artifacts are forbidden.
+- A Release asset is identified and deduplicated by SHA-256.
+- The repository working tree contains manifests, ledgers, provenance, and control metadata; it is not the authoritative byte store for PDFs.
 
 ## Repository-owned Releases
 
-This storage repository retains its own GitHub Releases. Releases are independent of Releases in the PDF storage family and are not removed when other storage shards gain their own Release workflows. The storage-release-publisher.yml workflow publishes verified matrix artifacts as assets belonging to this repository.
+This storage repository retains its own GitHub Releases. Releases are independent of Releases in the PDF storage family.
 
 ## One-copy rule
 
 - A canonical artifact is stored once, identified by SHA-256.
 - No duplicate public/protected PDF is permitted.
-- `.pdf.enc` is forbidden for PDF book storage.
 - If an artifact's access state changes, its canonical identity and SHA-256 remain unchanged; a second physical copy must not be created.
 - Provenance, rights, verification, manifests, and scientific-ledger metadata are required.
-- PDF book storage remains logically separate from the matrix ledger and uses the `dinullah-pdf-storage-*` storage family.
-
-## Developer access
-
-The developer has repository administration/read/write access to this repository. Protected access is permitted only through the separate permissioned backend and must be granted to the same developer identity.
 
 ## Corpus boundary
 
